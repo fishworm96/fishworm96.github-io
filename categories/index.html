@@ -6,19 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>返回字符位置 | 梦开始的地方</title>
+  <title>Hexo 添加分类及标签 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1234567891011121314151617181920212223242526&#x2F;&#x2F; 判断一个字符串 &amp;#x27;abcoefoxyozzopp&amp;#x27; 中出现次数最多的字符，并统计其次数&#x2F;&#x2F; 核心算法：利用 charAt() 遍历这个字符串&#x2F;&#x2F; 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1&#x2F;&#x2F; 遍历对象，得到最大值和该字符var str &#x3D; &amp;#x27;abc">
-<meta property="og:type" content="article">
-<meta property="og:title" content="返回字符位置">
-<meta property="og:url" content="http://example.com/2020/11/19/%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6%E4%BD%8D%E7%BD%AE/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo 添加分类及标签">
+<meta property="og:url" content="http://example.com/categories/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="1234567891011121314151617181920212223242526&#x2F;&#x2F; 判断一个字符串 &amp;#x27;abcoefoxyozzopp&amp;#x27; 中出现次数最多的字符，并统计其次数&#x2F;&#x2F; 核心算法：利用 charAt() 遍历这个字符串&#x2F;&#x2F; 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1&#x2F;&#x2F; 遍历对象，得到最大值和该字符var str &#x3D; &amp;#x27;abc">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-19T13:18:56.000Z">
-<meta property="article:modified_time" content="2021-03-02T12:09:40.743Z">
+<meta property="article:published_time" content="2021-03-02T10:10:52.000Z">
+<meta property="article:modified_time" content="2021-03-02T11:55:44.674Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="返回字符位置">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="梦开始的地方" type="application/atom+xml">
@@ -155,29 +152,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-返回字符位置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      返回字符位置
+      Hexo 添加分类及标签
     </h1>
   
 
         
-        <a href="/2020/11/19/%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6%E4%BD%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-11-19T13:18:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-19</time>
+        <a href="/categories/index.html" class="archive-article-date">
+  	<time datetime="2021-03-02T10:10:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断一个字符串 &#x27;abcoefoxyozzopp&#x27; 中出现次数最多的字符，并统计其次数</span></span><br><span class="line"><span class="comment">// 核心算法：利用 charAt() 遍历这个字符串</span></span><br><span class="line"><span class="comment">// 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1</span></span><br><span class="line"><span class="comment">// 遍历对象，得到最大值和该字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;abcoefoxyozzopp&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> chars = str.charAt(i) <span class="comment">//chars是字符串的每一个字符</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[chars]</span>)</span> &#123; <span class="comment">// o[chars] 得到的是属性值</span></span><br><span class="line">        o[chars]++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        o[chars] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br><span class="line"><span class="keyword">var</span> ch = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="comment">//2.遍历对象</span></span><br><span class="line"><span class="keyword">var</span> max = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">//k 得到的是属性名</span></span><br><span class="line">    <span class="comment">// o[k] 得到的是属性值</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[k] &gt; max</span>)</span> &#123;</span><br><span class="line">        max = <span class="number">0</span>[k]</span><br><span class="line">        ch = k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
       
 
       
@@ -206,29 +201,7 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">返回字符位置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JS算法//" class="article-tag-list-link color5">JS算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -278,7 +251,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/19/%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6%E4%BD%8D%E7%BD%AE/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/categories/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,16 +263,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/2020/11/19/%E5%86%92%E6%B3%A1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">冒泡</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -350,7 +313,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
