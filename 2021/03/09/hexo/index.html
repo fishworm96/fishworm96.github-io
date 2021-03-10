@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>冒泡 | 梦开始的地方</title>
+  <title>hexo | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789var arr &#x3D; [5, 4, 3, 2, 1]for (var i &#x3D; 0; i &lt;&#x3D; arr.length -1; i++) &amp;#123;&#x2F;&#x2F;外层循环管趟数	for (var j &#x3D; 0; j &lt;&#x3D; arr.length -i -1; j++)&#x2F;&#x2F;里面的循环管每趟的交换次数  if(arr[j]) &gt; arr[j + 1] &amp;#123;		var temp">
+  <meta name="description" content="HEXO基本操作123456hexo s	开启本地博客地址：http:&#x2F;&#x2F;localhost:4000hexo n &quot;文章名&quot;vim &quot;文章名称.md&quot;	进入文章进行修改	wq	保存并退出hexo clean	清理hexo g	生成(在本地生成新建的文章)hexo d	推送">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡">
-<meta property="og:url" content="http://example.com/2020/11/19/%E5%86%92%E6%B3%A1/index.html">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://example.com/2021/03/09/hexo/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="123456789var arr &#x3D; [5, 4, 3, 2, 1]for (var i &#x3D; 0; i &lt;&#x3D; arr.length -1; i++) &amp;#123;&#x2F;&#x2F;外层循环管趟数	for (var j &#x3D; 0; j &lt;&#x3D; arr.length -i -1; j++)&#x2F;&#x2F;里面的循环管每趟的交换次数  if(arr[j]) &gt; arr[j + 1] &amp;#123;		var temp">
+<meta property="og:description" content="HEXO基本操作123456hexo s	开启本地博客地址：http:&#x2F;&#x2F;localhost:4000hexo n &quot;文章名&quot;vim &quot;文章名称.md&quot;	进入文章进行修改	wq	保存并退出hexo clean	清理hexo g	生成(在本地生成新建的文章)hexo d	推送">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-19T11:03:06.000Z">
-<meta property="article:modified_time" content="2021-03-02T13:09:25.198Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8921320-9201b23ae78846cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="article:published_time" content="2021-03-09T14:33:21.000Z">
+<meta property="article:modified_time" content="2021-03-10T14:08:41.336Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8921320-9201b23ae78846cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
   
     <link rel="alternative" href="/atom.xml" title="梦开始的地方" type="application/atom+xml">
   
@@ -154,28 +157,89 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-冒泡" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      冒泡
+      hexo
     </h1>
   
 
         
-        <a href="/2020/11/19/%E5%86%92%E6%B3%A1/" class="archive-article-date">
-  	<time datetime="2020-11-19T11:03:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-19</time>
+        <a href="/2021/03/09/hexo/" class="archive-article-date">
+  	<time datetime="2021-03-09T14:33:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= arr.length -<span class="number">1</span>; i++) &#123;<span class="comment">//外层循环管趟数</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt;= arr.length -i -<span class="number">1</span>; j++)<span class="comment">//里面的循环管每趟的交换次数</span></span><br><span class="line">  <span class="keyword">if</span>(arr[j]) &gt; arr[j + <span class="number">1</span>] &#123;</span><br><span class="line">		<span class="keyword">var</span> temp = arr[j];</span><br><span class="line">		arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">		arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo s	开启本地博客地址：http:&#x2F;&#x2F;localhost:4000</span><br><span class="line">hexo n &quot;文章名&quot;</span><br><span class="line">vim &quot;文章名称.md&quot;	进入文章进行修改	wq	保存并退出</span><br><span class="line">hexo clean	清理</span><br><span class="line">hexo g	生成(在本地生成新建的文章)</span><br><span class="line">hexo d	推送</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
+<h2 id="Hexo-添加分类及标签"><a href="#Hexo-添加分类及标签" class="headerlink" title="Hexo 添加分类及标签"></a>Hexo 添加分类及标签</h2><blockquote>
+<p>生成的新文件夹都在source下也就是和放文章的文件夹一块 以下所有命令都是在博客文件目录下执行</p>
+</blockquote>
+<h4 id="1-创建“分类”选项"><a href="#1-创建“分类”选项" class="headerlink" title="1. 创建“分类”选项"></a>1. 创建“分类”选项</h4><p>生成“分类”页并添加tpye属性,进入博客目录。执行下方命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>categories文件夹下会有index.md这个文件，打开后默认内容是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2019-04-22 14:47:40</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>添加type: “categories”到内容中，添加后是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2019-04-24 15:30:30</span><br><span class="line">type: categories</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>保存并关闭文件。</p>
+<p>给文章添加“categories”属性</p>
+<p>打开需要添加分类的文章，为其添加categories属性。下方的categories:Hexo表示这篇文章添加到到“Hexo”这个分类。注意：一篇文章只会添加到一个分类中，如果是多个默认放到第一个分类中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 添加分类及标签</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: Hexo</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了categories: xxx的文章才会被收录到首页的“分类”中。</p>
+<h4 id="2-创建“标签”选项"><a href="#2-创建“标签”选项" class="headerlink" title="2. 创建“标签”选项"></a>2. 创建“标签”选项</h4><p>生成“标签”页并添加tpye属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>在tags文件夹下，找到index.md这个文件，打开后默认内容是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2019-04-22 14:22:08</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>添加type: “tags”到内容中，添加后是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2019-04-24 15:40:24</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>保存并关闭文件。</p>
+<p>给文章添加“tags”属性,打开需要添加标签的文章，为其添加tags属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo 添加分类及标签</span><br><span class="line">date: 2019-04-24 15:40:24</span><br><span class="line">categories:  Hexo</span><br><span class="line">tags:  博客</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加评论功能"><a href="#添加评论功能" class="headerlink" title="添加评论功能"></a>添加评论功能</h1><h2 id="一、添加留言本-page"><a href="#一、添加留言本-page" class="headerlink" title="一、添加留言本 page"></a>一、添加留言本 page</h2><p>进入到博客的根目录，运行命令：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page guestbook</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、留言本页面中添加多说访客代码"><a href="#二、留言本页面中添加多说访客代码" class="headerlink" title="二、留言本页面中添加多说访客代码"></a>二、留言本页面中添加多说访客代码</h2><p>上一步中使用 hexo 命令新建了一个 page，进入到博客的source目录，里面会多了一个gusetbook文件夹，里面有一个index.md文件，打开该文件编辑：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;ds-recent-visitors&quot;</span> data-num-items=<span class="string">&quot;28&quot;</span> data-avatar-size=<span class="string">&quot;42&quot;</span> id=<span class="string">&quot;ds-recent-visitors&quot;</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码加到index.md底部就行。</p>
+<h2 id="三、菜单设置中添加留言本"><a href="#三、菜单设置中添加留言本" class="headerlink" title="三、菜单设置中添加留言本"></a>三、菜单设置中添加留言本</h2><p>找到Next主题设置的_config.yml文件里面的menu项</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  <span class="comment">#about: /about</span></span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  categories: /categories</span><br><span class="line">  guestbook: /guestbook</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、添加多语言文件的值"><a href="#四、添加多语言文件的值" class="headerlink" title="四、添加多语言文件的值"></a>四、添加多语言文件的值</h2><p>因为这里使用的是中文，找到languages文件夹里面的zh-CH.yml文件，menu子项中添加留言：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  commonweal: 公益404</span><br><span class="line">  guestbook: 留言</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、设置一个评论系统"><a href="#五、设置一个评论系统" class="headerlink" title="五、设置一个评论系统"></a>五、设置一个评论系统</h2><p>我用的是Next 主题，本身就已经集成了valine，直接配置即可<br> 下面网上搜来的其余系统,请自行搜索教程</p>
+<ul>
+<li><del>多说</del></li>
+<li><del>网易云跟帖</del></li>
+<li>畅言</li>
+<li>来必力（LiveRe）</li>
+<li>Disqus</li>
+<li>Hypercomments</li>
+<li>valine</li>
+</ul>
+<h2 id="开启Valine"><a href="#开启Valine" class="headerlink" title="开启Valine"></a>开启Valine</h2><h1 id="注册Leancloud"><a href="#注册Leancloud" class="headerlink" title="注册Leancloud"></a>注册Leancloud</h1><p>我们的评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号 <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://leancloud.cn/">点我注册</a></p>
+<p>1、 注册完以后需要创建一个应用，名字可以随便起，然后 进入应用-&gt;设置-&gt;应用key ,获取你的 <code>appid</code> 和 <code>appkey</code><br> 2、 打开主题配置文件 搜索 valine，填入appid 和 appkey</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8921320-9201b23ae78846cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p>配置appid 和 appkey.png</p>
+<p> 2、在Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去</p>
 
       
 
@@ -205,18 +269,18 @@
     <div class="article-info article-info-index">
       
       
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JS算法//" class="article-tag-list-link color5">JS算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
       
 
@@ -266,7 +330,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/19/%E5%86%92%E6%B3%A1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/09/hexo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +344,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/19/%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6%E4%BD%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          返回字符位置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/16/%E6%97%B6%E9%97%B4%E6%88%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">时间戳</div>
+    <a href="/2021/03/09/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
