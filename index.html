@@ -251,13 +251,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Ajax基础"><a href="#Ajax基础" class="headerlink" title="Ajax基础"></a>Ajax基础</h1><h2 id="Ajax的应用场景"><a href="#Ajax的应用场景" class="headerlink" title="Ajax的应用场景"></a>Ajax的应用场景</h2><p>1.页面上拉加载更多数据</p>
-<p>2.列表数据无刷新分页</p>
-<p>3.表单项离开焦点数据证</p>
-<p>4.搜索框提示文字下拉列表</p>
-        
-          <a class="article-more-a" href="/2021/04/21/git%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
+        <h1 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h1><p>git版本的查询: git –version</p>
+<h2 id="git的使用"><a href="#git的使用" class="headerlink" title="git的使用"></a>git的使用</h2><h3 id="git使用前配置"><a href="#git使用前配置" class="headerlink" title="git使用前配置"></a>git使用前配置</h3><p>在使用git前，需要告诉git你是谁，在想git 仓库中提交需要用到。</p>
+<p>1.配置提交人姓名:    git config –global user.name    提交人姓名</p>
+<p>2.配置提交人邮箱： git config –global user.email    提交人邮箱</p>
+<p>3.查看git配置信息： git config –list</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例:</span><br><span class="line">	git config --global user.name yourname</span><br><span class="line">	git config --global user.emial youremail@emial.cn</span><br><span class="line">	查询git config --list</span><br></pre></td></tr></table></figure>
+
+<p>注意</p>
+<p>​    1.如果要对配置信息进行修改，重复上述命令即可</p>
+<p>​    2.配置只需要执行一次</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改name例:</span><br><span class="line">	直接执行进行覆盖 git config --global user.name name</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="提交步骤"><a href="#提交步骤" class="headerlink" title="提交步骤"></a>提交步骤</h3><p>1.git init 初始化git仓库</p>
+<p>2.git status 查看文件状态</p>
+<p>3.git add 文件列表 追踪文件</p>
+<p>4.git commit -m 提交信息 向仓库中提交代码</p>
+<p>5.git log 查看提交记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	git init	&#x2F;&#x2F;初始化仓库</span><br><span class="line">	git status	&#x2F;&#x2F;查看当前路径下文件状态</span><br><span class="line">	git add index.html	&#x2F;&#x2F;添加index.html文件</span><br><span class="line">	git commit -m 第一次提交	&#x2F;&#x2F;提交git仓库并备注</span><br><span class="line">	git log	&#x2F;&#x2F;查看提交记录</span><br></pre></td></tr></table></figure>
+
+<h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><p>用暂存区中的文件覆盖工作目录的文件：    git checkout 文件</p>
+<p>将文件从暂存区中删除： git rm –cached 文件</p>
+<p>将git仓库中指定的更新记录恢复出来，并且覆盖暂存区和工作目录：git reset –hard commitID</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	git checkout index.html	&#x2F;&#x2F;将index.html从暂存区恢复到本地</span><br><span class="line">	git rm --cached index.html	&#x2F;&#x2F;将index.html从暂存区中删除</span><br><span class="line">	git rest --hard &#39;commitID&#39;	&#x2F;&#x2F;将git仓库文件恢复到本地</span><br></pre></td></tr></table></figure>
+
+<h3 id="分支命令"><a href="#分支命令" class="headerlink" title="分支命令"></a>分支命令</h3><p>功能分支-&gt;开发分支-&gt;主分支</p>
+<p>git branch 查看分支</p>
+<p>git branch 分支名称    创建分支</p>
+<p>git checkout 分支名称    切换分支</p>
+<p>git merge 来源分支    合并分支</p>
+<p>git reanch -d 分支名称    删除分支(分支被合并后才允许删除) (-D强制删除)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">git branch develop	&#x2F;&#x2F;创建开发分支</span><br><span class="line">git checkout develop	&#x2F;&#x2F;切换到主分支，切换分支前要将文件提交，没提交的文件会跟随分支切换进行切换</span><br></pre></td></tr></table></figure>
+
+<h3 id="暂时保存更改"><a href="#暂时保存更改" class="headerlink" title="暂时保存更改"></a>暂时保存更改</h3><p>在git中，可以暂时提取分支上所有的改动并储存，让开发人员得到一个干净的工作副本，临时转向其他工作。</p>
+<p>使用场景：分支临时切换</p>
+<p>存储临时改动：git stash</p>
+<p>恢复改动：git stash pop</p>
+<h3 id="github命令"><a href="#github命令" class="headerlink" title="github命令"></a>github命令</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>1.git push 远程仓库地址 分支名称</p>
+<p>2.git push 远程仓库地址别名 分支名称</p>
+<p>3.git push -u 远程仓库地址别名 分支名称</p>
+<p>​    -u 记住推送地址及分支，下次推送只需要输入git push即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master	&#x2F;&#x2F;系统将记住分支 </span><br><span class="line">全写为 git push --set-upstream origin master</span><br></pre></td></tr></table></figure>
+
+<p>4.git remote add 远程仓库地址别名 远程仓库地址</p>
+<h3 id="拉取操作"><a href="#拉取操作" class="headerlink" title="拉取操作"></a>拉取操作</h3><h4 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h4><p>克隆远端数据仓库到本地： git clone 仓库地址    //本地仓库没有</p>
+<h4 id="拉取远程仓库中最新的版本"><a href="#拉取远程仓库中最新的版本" class="headerlink" title="拉取远程仓库中最新的版本"></a>拉取远程仓库中最新的版本</h4><p>拉取远程仓库中最新的版本： git pull 远程仓库地址 分支名称    //本地仓库有，拉取最新版本</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
       
 
       
