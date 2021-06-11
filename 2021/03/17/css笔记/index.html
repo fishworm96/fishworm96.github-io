@@ -21,7 +21,7 @@
 <meta property="og:image" content="file://J:/%E9%BB%91%E9%A9%AC/04-06%20%E7%A7%BB%E5%8A%A8Web%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/02-Flex%20%E4%BC%B8%E7%BC%A9%E5%B8%83%E5%B1%80%E8%B5%84%E6%96%99/02-%E7%A7%BB%E5%8A%A8WEB%E5%BC%80%E5%8F%91_flex%E5%B8%83%E5%B1%80/4-%E7%AC%94%E8%AE%B0/images/1.jpg?lastModify=1617288615">
 <meta property="og:image" content="file://J:/%E9%BB%91%E9%A9%AC/04-06%20%E7%A7%BB%E5%8A%A8Web%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/03-%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91%E8%B5%84%E6%96%99/03-%E7%A7%BB%E5%8A%A8WEB%E5%BC%80%E5%8F%91_rem%E5%B8%83%E5%B1%80/4-%E7%AC%94%E8%AE%B0/images/3.png?lastModify=1617893265">
 <meta property="article:published_time" content="2021-03-17T14:27:03.000Z">
-<meta property="article:modified_time" content="2021-05-09T15:36:01.104Z">
+<meta property="article:modified_time" content="2021-06-11T02:49:20.916Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
@@ -430,7 +430,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 </li>
 </ul>
 <p><strong>1em 就是一个字的宽度   如果是汉字的段落， 1em 就是一个汉字的宽度</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p &#123;      &#x2F;*行间距*&#x2F;      line-height: 25px;      &#x2F;*首行缩进2个字  em  *&#x2F;      text-indent: 2em;   &#125; line-height:&quot;像素&quot;;行间距  text-indent:&quot;像素&quot;;首行缩进 1em就是1个字的距离2em就是2个字的距离</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">p &#123;      </span><br><span class="line">	&#x2F;*行间距*&#x2F;      </span><br><span class="line">	line-height: 25px;      </span><br><span class="line">	&#x2F;*首行缩进2个字  em  *&#x2F;      </span><br><span class="line">	text-indent: 2em;   </span><br><span class="line">&#125; </span><br><span class="line">	line-height:&quot;像素&quot;;行间距  </span><br><span class="line">	text-indent:&quot;像素&quot;;首行缩进 </span><br><span class="line">	1em就是1个字的距离2em就是2个字的距离</span><br></pre></td></tr></table></figure>
 
 <h2 id="5-text-decoration-文本的装饰"><a href="#5-text-decoration-文本的装饰" class="headerlink" title="5 text-decoration 文本的装饰"></a>5 text-decoration 文本的装饰</h2><p>text-decoration   通常我们用于给链接修改装饰效果</p>
 <table>
@@ -457,7 +457,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <td>定义穿过文本下的一条线。（不常用）</td>
 </tr>
 </tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-decoration:文本的装饰    	超链接自带下划线&#123;none:取消下划线underline:添加下划线&#125;blink:闪烁</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-decoration:文本的装饰    	</span><br><span class="line">超链接自带下划线&#123;none:取消下划线underline:添加下划线&#125;</span><br><span class="line">blink:闪烁</span><br></pre></td></tr></table></figure>
 
 <h2 id="6-CSS外观属性总结"><a href="#6-CSS外观属性总结" class="headerlink" title="6.CSS外观属性总结"></a>6.CSS外观属性总结</h2><table>
 <thead>
@@ -506,7 +506,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">父级 子级&#123;属性:属性值;属性:属性值;&#125;</span><br></pre></td></tr></table></figure>
 
 <p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.class h3&#123;color:red;font-size:16px;&#125;div strong&#123;子孙元素选测器，后代选择器&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.class h3&#123;color:red;font-size:16px;&#125;</span><br><span class="line">div strong&#123;子孙元素选测器，后代选择器&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>当标签发生嵌套时，内层标签就成为外层标签的后代。</li>
@@ -548,11 +548,11 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>因为伪类选择器很多，比如链接伪类，结构伪类等等。我们这里先给大家讲解链接伪类选择器。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a:link&#123;&#125;  未访问过的链接a:visited&#123;&#125; 已访问过的链接a:hover&#123;&#125; 鼠标移动到链接上a:active&#123;&#125; 选定的链接按照l v h a的顺序编写</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a &#123;   &#x2F;* a是标签选择器  所有的链接 *&#x2F;			font-weight: 700;			font-size: 16px;			color: gray;&#125;a:hover &#123;   &#x2F;* :hover 是链接伪类选择器 鼠标经过 *&#x2F;			color: red; &#x2F;*  鼠标经过的时候，由原来的 灰色 变成了红色 *&#x2F;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a &#123;   </span><br><span class="line">	&#x2F;* a是标签选择器  所有的链接 *&#x2F;			</span><br><span class="line">	font-weight: 700;			</span><br><span class="line">	font-size: 16px;			</span><br><span class="line">	color: gray;</span><br><span class="line">&#125;</span><br><span class="line">	a:hover &#123;   </span><br><span class="line">	&#x2F;* :hover 是链接伪类选择器 鼠标经过 *&#x2F;			</span><br><span class="line">	color: red; &#x2F;*  鼠标经过的时候，由原来的 灰色 变成了红色 *&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:focus	焦点选择器主要针对表单元素鼠标点击表单框后显示填写的特定元素</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：.total input &#123;  border: 1px solid #ccc;  height: 30px;  width: 40px;  transition: all .5s;&#125;&#x2F;*这个input 获得了焦点*&#x2F;.total input:focus &#123;  width: 80px;  border: 1px solid skyblue;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例：.total input &#123;  </span><br><span class="line">	border: 1px solid #ccc;  </span><br><span class="line">	height: 30px;  </span><br><span class="line">	width: 40px;  </span><br><span class="line">	transition: all .5s;</span><br><span class="line">&#125;&#x2F;*这个input 获得了焦点*&#x2F;</span><br><span class="line">	.total input:focus &#123;  </span><br><span class="line">	width: 80px;  </span><br><span class="line">	border: 1px solid skyblue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -752,7 +752,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 </tr>
 </tbody></table>
 <h2 id="4-背景位置-position"><a href="#4-背景位置-position" class="headerlink" title="4 背景位置(position)"></a>4 背景位置(position)</h2><p>语法： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-position : length || lengthbackground-position : position || position background-position;x坐标 y坐标；背景位置background-position:right top 右上角； left bottom左下角；center center水平居中垂直居中；两个值顺序没有关系</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-position : length || lengthbackground-position : position || position background-position : x坐标 y坐标；背景位置background-position:right top 右上角； left bottom左下角；center center水平居中垂直居中；两个值顺序没有关系</span><br></pre></td></tr></table></figure>
 
 <table>
 <thead>
@@ -820,7 +820,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <li>注意：  背景半透明是指盒子背景半透明， 盒子里面的内容不受影响</li>
 <li>因为是CSS3 ，所以 低于 ie9 的版本是不支持的。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">示例：background:#ccc url(地址) no-repeat fixed;backgroudn:-webkit-linear-gradient(left,颜色，颜色);线性渐变background: rgba(0, 0, 0, .2)背景透明a代表透明度百分比background-size:背景图片宽度 背景图片高度；单位：长度｜百分比｜cover|contain;只写一个单位另一个单位等比例缩放。cover把背景图片扩展至足够大，以使背景图片完全覆盖区域。宽度高度同时扩展直至同时填满盒子contain把背景图片扩展至足够到，宽度或高度其中一个先到边缘停止扩展。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">示例：</span><br><span class="line">	background:#ccc url(地址) no-repeat fixed;</span><br><span class="line">	backgroudn:-webkit-linear-gradient(left,颜色，颜色);</span><br><span class="line">	线性渐变background: rgba(0, 0, 0, .2)背景透明a代表透明度百分比</span><br><span class="line">	background-size:背景图片宽度 背景图片高度；</span><br><span class="line">	单位：长度｜百分比｜cover|contain;</span><br><span class="line">	只写一个单位另一个单位等比例缩放。cover把背景图片扩展至足够大，以使背景图片完全覆盖区域。宽度高度同时扩展直至同时填满盒子contain把背景图片扩展至足够到，宽度或高度其中一个先到边缘停止扩展。</span><br></pre></td></tr></table></figure>
 
 <h2 id="8-背景总结"><a href="#8-背景总结" class="headerlink" title="8 背景总结"></a>8 背景总结</h2><table>
 <thead>
@@ -999,14 +999,14 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>padding在没有宽度时不会撑开盒子</p>
 <p>margin只继承最高数值的像素，左右边距不继承。只在上下相邻的元素里出现。</p>
 <p>margin对嵌套会出现塌陷（嵌套关系，垂直外边距合并），解决方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、border-top:1px solid transparent；给父级定义一个上边框2、padding-top:1px;给父级定义一个padding值3、给父元素添加overflow:hidden;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、border-top:1px solid transparent；给父级定义一个上边框</span><br><span class="line">2、padding-top:1px;给父级定义一个padding值</span><br><span class="line">3、给父元素添加overflow:hidden;</span><br></pre></td></tr></table></figure>
 
 <p>width&gt;padding&gt;margin优先使用</p>
 <p>4、圆角矩形</p>
 <p>按照顺时针的顺序书写</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Border-radius:length圆角边框</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border-top-left-radius:像素border-top-right-radius:像素border-bottom-right-radius:像素border-bottom-left-radius:像素border-radius:左上 右上 右下 左下（四个角）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">border-top-left-radius:像素</span><br><span class="line">border-top-right-radius:像素</span><br><span class="line">border-bottom-right-radius:像素</span><br><span class="line">border-bottom-left-radius:像素</span><br><span class="line">border-radius:左上 右上 右下 左下（四个角）</span><br></pre></td></tr></table></figure>
 
 <p>border-radius:50%圆形 border-radius:10px圆角长条</p>
 <p>box-shadow:水平阴影 垂直阴影 模糊距离（虚实） 阴影尺寸（影子大小） 阴影颜色 内/外阴影</p>
@@ -1115,9 +1115,9 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.father&#123;overflow:hidden,auto（会加上下滚动条），scroll（会加上下左右滚动条）&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3、使用after伪元素清楚浮动"><a href="#3、使用after伪元素清楚浮动" class="headerlink" title="3、使用after伪元素清楚浮动"></a>3、使用after伪元素清楚浮动</h3><p>:after 方式为空元素额外标签法的升级版，好处是不用单独加标签了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：.clearfix:after&#123;				content:&quot;&quot;;​								display:block;​								height:0;​								visibility:hidden;​								clear:both;&#125;.clearfix&#123;*zoom:1;“清除ie6 ie7的浮动”&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">.clearfix:after&#123;				</span><br><span class="line">	content:&quot;&quot;;​								</span><br><span class="line">	display:block;​								</span><br><span class="line">	height:0;​								</span><br><span class="line">	visibility:hidden;​								</span><br><span class="line">	clear:both;</span><br><span class="line">&#125;</span><br><span class="line">	.clearfix&#123;*zoom:1;“清除ie6 ie7的浮动”&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="4、使用双伪元素清除浮动"><a href="#4、使用双伪元素清除浮动" class="headerlink" title="4、使用双伪元素清除浮动"></a>4、使用双伪元素清除浮动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：.clearfix::befor，.clearfix::after	&#123;content:&quot;“​				display:table;&#125;.clearfix::after	&#123;clear:both;&#125;.clearfix	&#123;*zoom:1;	“清除ie6 ie7的浮动”&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4、使用双伪元素清除浮动"><a href="#4、使用双伪元素清除浮动" class="headerlink" title="4、使用双伪元素清除浮动"></a>4、使用双伪元素清除浮动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	.clearfix::befor，</span><br><span class="line">	.clearfix::after &#123; </span><br><span class="line">	content:&quot;“​				</span><br><span class="line">	display:table;</span><br><span class="line">&#125;</span><br><span class="line">	.clearfix::after &#123; </span><br><span class="line">	clear:both;</span><br><span class="line">&#125;</span><br><span class="line">	.clearfix	&#123;</span><br><span class="line">	*zoom:1;	“清除ie6 ie7的浮动”</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1239,10 +1239,10 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>hidden；不显示超过对象尺寸的内容，超出的部分隐藏掉</p>
 <p>scroll；不管超出内容否，总是显示滚动条</p>
 <p>auto；超出自动显示滚动条，不超出不显示滚动条</p>
-<h2 id="对溢出部分显示省略号的写法"><a href="#对溢出部分显示省略号的写法" class="headerlink" title="对溢出部分显示省略号的写法"></a>对溢出部分显示省略号的写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">white-space: normal;	默认处理方式white-space: nowrap;	强制一行内显示文字（除非遇到br标签才能换行）text-overflow: clip;	不显示省略号（……），而是简单的剪裁text-overflow: ellipsis;	当对象内文本溢出时隙那好似省略号（……）</span><br></pre></td></tr></table></figure>
+<h2 id="对溢出部分显示省略号的写法"><a href="#对溢出部分显示省略号的写法" class="headerlink" title="对溢出部分显示省略号的写法"></a>对溢出部分显示省略号的写法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">white-space: normal;	默认处理方式</span><br><span class="line">white-space: nowrap;	强制一行内显示文字（除非遇到br标签才能换行）</span><br><span class="line">text-overflow: clip;	不显示省略号（……），而是简单的剪裁</span><br><span class="line">text-overflow: ellipsis;	当对象内文本溢出时隙那好似省略号（……）</span><br></pre></td></tr></table></figure>
 
 <p>一定要首先强制一行内显示，再次和overflow属性配合</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*1.先强制一行内显示文本*&#x2F;​	white-space: nowrap;&#x2F;*2.超出的部分隐藏*&#x2F;​	overflow: hidden;&#x2F;*3.文字用省略号替代超出的部分*&#x2F;​	text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*1.先强制一行内显示文本*&#x2F;​	white-space: nowrap;&#x2F;*</span><br><span class="line">2.超出的部分隐藏*&#x2F;​	overflow: hidden;&#x2F;*</span><br><span class="line">3.文字用省略号替代超出的部分*&#x2F;​	text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1259,23 +1259,23 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 
 <p>只能应用于行内元素和行内块元素</p>
 <h2 id="溢出的文字省略号显示"><a href="#溢出的文字省略号显示" class="headerlink" title="溢出的文字省略号显示"></a>溢出的文字省略号显示</h2><h3 id="1-white-space"><a href="#1-white-space" class="headerlink" title="1.white-space"></a>1.white-space</h3><p>white-space设置或检索对象内文本显示方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">white-space: normal;	默认处理方式white-space: nowrap;	强制在同一行内显示所有文本，知道文本结束或遭遇br标签对象才换行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">white-space: normal;	</span><br><span class="line">默认处理方式white-space: nowrap;	</span><br><span class="line">强制在同一行内显示所有文本，知道文本结束或遭遇br标签对象才换行</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-text-overflow文字溢出"><a href="#2-text-overflow文字溢出" class="headerlink" title="2.text-overflow文字溢出"></a>2.text-overflow文字溢出</h3><p>设置或检索是否使用一个省略标记…标示对象内文本的溢出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">text-overflow: clip;	不显示省略标记...，而是简单的剪裁text-overflow: ellipsis; 当对象内文本溢出时显示省略号标记...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">text-overflow: clip;	</span><br><span class="line">不显示省略标记...，而是简单的剪裁text-overflow: ellipsis; </span><br><span class="line">当对象内文本溢出时显示省略号标记...</span><br></pre></td></tr></table></figure>
 
 <p>一定要首先强制一行内显示，再次和overflow属性搭配使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.强制一行内显示文本white-space: nowrap;2.超出的部分隐藏overflow: hidden;3.文字用省略号代替超出的部分text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.强制一行内显示文本white-space: nowrap;</span><br><span class="line">2.超出的部分隐藏overflow: hidden;</span><br><span class="line">3.文字用省略号代替超出的部分text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
 
 <h2 id="解决图片有空白缝隙问题"><a href="#解决图片有空白缝隙问题" class="headerlink" title="解决图片有空白缝隙问题"></a>解决图片有空白缝隙问题</h2><p>1、只要不让图片和基线对齐都能解决图片底边空白缝隙</p>
 <p>2、给img添加display：block转换成块级元素</p>
-<h1 id="自定义字体样式"><a href="#自定义字体样式" class="headerlink" title="自定义字体样式"></a>自定义字体样式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;   font-family: &#39;icomoon&#39;;   src:  url(&#39;fonts&#x2F;icomoon.eot?7kkyc2&#39;);   src:  url(&#39;fonts&#x2F;icomoon.eot?7kkyc2#iefix&#39;) format(&#39;embedded-opentype&#39;),    url(&#39;fonts&#x2F;icomoon.ttf?7kkyc2&#39;) format(&#39;truetype&#39;),    url(&#39;fonts&#x2F;icomoon.woff?7kkyc2&#39;) format(&#39;woff&#39;),    url(&#39;fonts&#x2F;icomoon.svg?7kkyc2#icomoon&#39;) format(&#39;svg&#39;);   font-weight: normal;   font-style: normal;&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="自定义字体样式"><a href="#自定义字体样式" class="headerlink" title="自定义字体样式"></a>自定义字体样式</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;   </span><br><span class="line">	font-family: &#39;icomoon&#39;;</span><br><span class="line">    src:  url(&#39;fonts&#x2F;icomoon.eot?7kkyc2&#39;);</span><br><span class="line">    src:  url(&#39;fonts&#x2F;icomoon.eot?7kkyc2#iefix&#39;) </span><br><span class="line">    format(&#39;embedded-opentype&#39;),</span><br><span class="line">    url(&#39;fonts&#x2F;icomoon.ttf?7kkyc2&#39;) format(&#39;truetype&#39;),    		                     url(&#39;fonts&#x2F;icomoon.woff?7kkyc2&#39;) format(&#39;woff&#39;),    </span><br><span class="line">    url(&#39;fonts&#x2F;icomoon.svg?7kkyc2#icomoon&#39;) format(&#39;svg&#39;);   </span><br><span class="line">    font-weight: normal;   </span><br><span class="line">    font-style: normal;&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <h1 id="过度"><a href="#过度" class="headerlink" title="过度"></a>过度</h1><p>通常配合:hover,如果有多组属性配合逗号隔开</p>
 <p>属性就是你想要变化的css属性，宽度高度背景颜色内外边距都可以。如果想要所有属性都变化过度，写一个all就可以。过度写在本身上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transition:要过度的属性 花费时间 运动曲线 何时开始；transition:width        1s     ease默认    0s默认</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transition:要过度的属性 花费时间 运动曲线 何时开始；</span><br><span class="line">transition:width        1s     ease默认    0s默认</span><br></pre></td></tr></table></figure>
 
 <p>transition-property    规定应用过度的css属性的名称</p>
 <p>transition-duration    定义过渡效果花费的时间。默认0</p>
@@ -1283,19 +1283,19 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>transition-delay    规定过渡效果何时开始。默认是0</p>
 <p>transitionend        监听结束</p>
 <p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div &#123;			width: 200px;			height: 100px;			background-color: pink;			&#x2F;* transition: 要过渡的属性  花费时间  运动曲线  何时开始; *&#x2F;			transition: width 0.6s ease 0s, height 0.3s ease-in 1s;			&#x2F;* transtion 过渡的意思  这句话写到div里面而不是 hover里面 *&#x2F;&#125;div:hover &#123;  &#x2F;* 鼠标经过盒子，我们的宽度变为400 *&#x2F;			width: 600px;			height: 300px&#125;transition: all 0.6s;  &#x2F;* 所有属性都变化用all 就可以了  后面俩个属性可以省略 *&#x2F;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background-color: pink;</span><br><span class="line">    &#x2F;* transition: 要过渡的属性  花费时间  运动曲线  何时开始; *&#x2F;</span><br><span class="line">    transition: width 0.6s ease 0s, height 0.3s ease-in 1s;</span><br><span class="line">    &#x2F;* transtion 过渡的意思  这句话写到div里面而不是 hover里面 *&#x2F;&#125;</span><br><span class="line">    	div:hover &#123;  </span><br><span class="line">    	&#x2F;* 鼠标经过盒子，我们的宽度变为400 *&#x2F;	</span><br><span class="line">        	width: 600px;</span><br><span class="line">            height: 300px&#125;transition: all 0.6s;  </span><br><span class="line">            &#x2F;* 所有属性都变化用all 就可以了  后面俩个属性可以省略 *&#x2F;</span><br><span class="line">           &#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h1><h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>E[att]选择具有att属性的E元素</p>
 <p>E[att=”val”]选择具有att属性且属性值等于val的E元素</p>
 <p>E[att^=”val”]匹配具有att属性、且值以val“开头”的E元素</p>
 <p>E[att$=”val”]匹配具有att属性、且值以val“结尾”的E元素</p>
 <p>E[att*=”val”]匹配具有att属性、且值“中含”有val的E元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例1：input[type&#x3D;&quot;search&quot;]&#123;&#125; &lt;input type&#x3D;&quot;search&quot;&gt;例2：input[type^&#x3D;&quot;icon&quot;]&#123;&#125;&lt;input type&#x3D;&quot;icon1&quot;&gt;例3：input[type$&#x3D;&quot;icon&quot;]&lt;input type&#x3D;&quot;absicon&quot;&gt;例4：input[type*&#x3D;&quot;icon&quot;]&lt;input type&#x3D;&quot;icon&quot;&gt;&lt;input type&#x3D;&quot;icon1&quot;&gt;&lt;input type&#x3D;&quot;absicon&quot;&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例1：</span><br><span class="line">	input[type&#x3D;&quot;search&quot;]&#123;&#125; &lt;input type&#x3D;&quot;search&quot;&gt;</span><br><span class="line">例2：</span><br><span class="line">	input[type^&#x3D;&quot;icon&quot;]&#123;&#125;&lt;input type&#x3D;&quot;icon1&quot;&gt;</span><br><span class="line">例3：</span><br><span class="line">	input[type$&#x3D;&quot;icon&quot;]&lt;input type&#x3D;&quot;absicon&quot;&gt;</span><br><span class="line">例4：</span><br><span class="line">	input[type*&#x3D;&quot;icon&quot;]&lt;input type&#x3D;&quot;icon&quot;&gt;&lt;input type&#x3D;&quot;icon1&quot;&gt;&lt;input type&#x3D;&quot;absicon&quot;&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>E:first-child匹配父元素中的第一个子元素E</p>
 <p>E:last-child匹配父元素中的最后一个子元素E</p>
 <p>E:nth-child(n)匹配父元素中的第n个子元素E；匹配父元素中的第 n 个子元素，元素类型没有限制。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例1：ul li:first-child&#123;&#125; &#x2F;*第一个li*&#x2F;ul li:last-child&#123;&#125; &#x2F;*最后一个li*&#x2F;ul li:nth-child(n)&#123;&#125; &#x2F;*第n个li*&#x2F;&lt;ul&gt; &lt;li&gt;1&lt;&#x2F;li&gt; &lt;&#x2F;ul&gt;&lt;ul&gt; &lt;li&gt;2&lt;&#x2F;li&gt; &lt;&#x2F;ul&gt;&lt;ul&gt; &lt;li&gt;3&lt;&#x2F;li&gt; &lt;&#x2F;ul&gt;例2：div span:nth-child(1)&#123;&#125;  &#x2F;*第一个子元素为p标签，将无法显示描述属性。第二个字元							素为span，选择2将执行描述属性。*&#x2F;&lt;div&gt;	&lt;p&gt;&lt;&#x2F;p&gt;	&lt;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">例1：</span><br><span class="line">	ul li:first-child&#123;&#125; &#x2F;*第一个li*&#x2F;</span><br><span class="line">	ul li:last-child&#123;&#125; 	&#x2F;*最后一个li*&#x2F;</span><br><span class="line">	ul li:nth-child(n)&#123;&#125; &#x2F;*第n个li*&#x2F;</span><br><span class="line">	&lt;ul&gt; </span><br><span class="line">	&lt;li&gt;1&lt;&#x2F;li&gt; </span><br><span class="line">	&lt;&#x2F;ul&gt;&lt;ul&gt; </span><br><span class="line">	&lt;li&gt;2&lt;&#x2F;li&gt; </span><br><span class="line">	&lt;&#x2F;ul&gt;&lt;ul&gt; </span><br><span class="line">	&lt;li&gt;3&lt;&#x2F;li&gt; </span><br><span class="line">	&lt;&#x2F;ul&gt;</span><br><span class="line">例2：</span><br><span class="line">	div span:nth-child(1)&#123;&#125;  </span><br><span class="line">	&#x2F;*第一个子元素为p标签，将无法显示描述属性。第二个字元							</span><br><span class="line">	素为span，选择2将执行描述属性。*&#x2F;</span><br><span class="line">	&lt;div&gt;	</span><br><span class="line">	&lt;p&gt;&lt;&#x2F;p&gt;	</span><br><span class="line">	&lt;span&gt;&lt;&#x2F;span&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
 <p>nth-child(n)<br>    n可以是数字、关键字和公式<br>    n如果是数字，就是选择第几个<br>    常见的关键词有even 偶数 odd 奇数</p>
 <p>​    常见的公式如下(如果n是公式，则从0开始)</p>
@@ -1314,7 +1314,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>before和after创建一个元素，但是属于行内元素</p>
 <p>因为在dom里面看不见刚才创建的元素，所以我们称为伪元素</p>
 <p>伪元素和标签选择器一样，权重为1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例1：div::before &#123;	content:&#39;我&#39;&#125;例2：P::after&#123;				&#x2F;*插入字符符号*&#x2F;	content:&#39;\ea50&#39;	    font-family:&#39;icomoon&#39;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">例1：</span><br><span class="line">div::before &#123;	</span><br><span class="line">	content:&#39;我&#39;&#125;例2：P::after&#123;				</span><br><span class="line">	&#x2F;*插入字符符号*&#x2F;	content:&#39;\ea50&#39;	    </span><br><span class="line">	font-family:&#39;icomoon&#39;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="2D转换"><a href="#2D转换" class="headerlink" title="2D转换"></a>2D转换</h2><h3 id="位移"><a href="#位移" class="headerlink" title="位移"></a>位移</h3><h4 id="2D-转换"><a href="#2D-转换" class="headerlink" title="2D 转换"></a><code>2D</code> 转换</h4><ul>
 <li><code>2D</code> 转换是改变标签在二维平面上的位置和形状</li>
@@ -1332,7 +1332,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>translate最大的优点：不会影响其他元素的位置</p>
 <p>translate中的百分比单位是相对于自身元素的translate:(50%,50%); 盒子自身的百分比</p>
 <p>对行内标签没有效果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：div &#123;  background-color: lightseagreen;  width: 200px;  height: 100px;  &#x2F;* 平移 *&#x2F;  &#x2F;* 水平垂直移动 100px *&#x2F;  &#x2F;* transform: translate(100px, 100px); *&#x2F;  &#x2F;* 水平移动 100px *&#x2F;  &#x2F;* transform: translate(100px, 0) *&#x2F;  &#x2F;* 垂直移动 100px *&#x2F;  &#x2F;* transform: translate(0, 100px) *&#x2F;  &#x2F;* 水平移动 100px *&#x2F;  &#x2F;* transform: translateX(100px); *&#x2F;  &#x2F;* 垂直移动 100px *&#x2F;  transform: translateY(100px)&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	div &#123;  </span><br><span class="line">	background-color: lightseagreen;  </span><br><span class="line">	width: 200px;  </span><br><span class="line">	height: 100px;  &#x2F;* 平移 *&#x2F;  &#x2F;* 水平垂直移动 100px *&#x2F;  &#x2F;* </span><br><span class="line">	transform: translate(100px, 100px); *&#x2F;  &#x2F;* 水平移动 100px *&#x2F;  &#x2F;* </span><br><span class="line">	transform: translate(100px, 0) *&#x2F;  &#x2F;* 垂直移动 100px *&#x2F;  &#x2F;* </span><br><span class="line">	transform: translate(0, 100px) *&#x2F;  &#x2F;* 水平移动 100px *&#x2F;  &#x2F;* </span><br><span class="line">	transform: translateX(100px); *&#x2F;  &#x2F;* 垂直移动 100px *&#x2F;  </span><br><span class="line">	transform: translateY(100px)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform:rotate（度数）</span><br></pre></td></tr></table></figure>
 
@@ -1382,20 +1382,20 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p><code>scale</code> 最大的优势：可以设置转换中心点缩放，默认以中心点缩放，而且不影响其他盒子</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：div:hover &#123;	   &#x2F;* 注意，数字是倍数的含义，所以不需要加单位 *&#x2F;	   &#x2F;* transform: scale(2, 2) *&#x2F;   	   &#x2F;* 实现等比缩放，同时修改宽与高 *&#x2F;	   &#x2F;* transform: scale(2) *&#x2F;   	   &#x2F;* 小于 1 就等于缩放*&#x2F;	   transform: scale(0.5, 0.5)   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	div:hover &#123;	   </span><br><span class="line">	&#x2F;* 注意，数字是倍数的含义，所以不需要加单位 *&#x2F;	   </span><br><span class="line">	&#x2F;* transform: scale(2, 2) *&#x2F;   	   </span><br><span class="line">	&#x2F;* 实现等比缩放，同时修改宽与高 *&#x2F;	   </span><br><span class="line">	&#x2F;* transform: scale(2) *&#x2F;   	   </span><br><span class="line">	&#x2F;* 小于 1 就等于缩放*&#x2F;	   </span><br><span class="line">	transform: scale(0.5, 0.5)   </span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="综合写法"><a href="#综合写法" class="headerlink" title="综合写法"></a>综合写法</h3><p>格式：transform:translate()  rotate() scale() 等</p>
 <p>其顺序会影响转化的效果。(先旋转会改变坐标轴方向)</p>
 <p>当我们同时有位移和其他属性的时候，记得要讲位移放到最先面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：div:hover &#123;  transform: translate(200px, 0) rotate(360deg) scale(1.2)&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	div:hover &#123;  </span><br><span class="line">	transform: translate(200px, 0) rotate(360deg) scale(1.2)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h5 id="语法格式-定义动画"><a href="#语法格式-定义动画" class="headerlink" title="语法格式(定义动画)"></a>语法格式(定义动画)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：@keyframes 动画名称 &#123;    0% &#123;        width: 100px;    &#125;    100% &#123;        width: 200px    &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><h5 id="语法格式-定义动画"><a href="#语法格式-定义动画" class="headerlink" title="语法格式(定义动画)"></a>语法格式(定义动画)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	@keyframes 动画名称 &#123;    </span><br><span class="line">	0% &#123;       </span><br><span class="line">    width: 100px;    </span><br><span class="line">    &#125;    </span><br><span class="line">    100% &#123;        </span><br><span class="line">    width: 200px    </span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="语法格式-使用动画"><a href="#语法格式-使用动画" class="headerlink" title="语法格式(使用动画)"></a>语法格式(使用动画)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：div &#123;	&#x2F;* 调用动画 *&#x2F;    animation-name: 动画名称; 	&#x2F;* 持续时间 *&#x2F; 	animation-duration: 持续时间；&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="语法格式-使用动画"><a href="#语法格式-使用动画" class="headerlink" title="语法格式(使用动画)"></a>语法格式(使用动画)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	div &#123;	</span><br><span class="line">	&#x2F;* 调用动画 *&#x2F;    </span><br><span class="line">	animation-name: 动画名称; 	</span><br><span class="line">	&#x2F;* 持续时间 *&#x2F; 	</span><br><span class="line">	animation-duration: 持续时间；</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="动画序列"><a href="#动画序列" class="headerlink" title="动画序列"></a>动画序列</h5><ul>
 <li>0% 是动画的开始，100 % 是动画的完成，这样的规则就是动画序列</li>
@@ -1403,7 +1403,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <li>动画是使元素从一个样式逐渐变化为另一个样式的效果，可以改变任意多的样式任意多的次数</li>
 <li>用百分比来规定变化发生的时间，或用 <code>from</code> 和 <code>to</code>，等同于 0% 和 100%</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：&lt;style&gt;    div &#123;      width: 100px;      height: 100px;      background-color: aquamarine;      animation-name: move;      animation-duration: 0.5s;    &#125;    @keyframes move&#123;      0% &#123;        transform: translate(0px)      &#125;      100% &#123;        transform: translate(500px, 0)      &#125;    &#125;  &lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	&lt;style&gt;    </span><br><span class="line">div &#123;     </span><br><span class="line">    width: 100px;      </span><br><span class="line">    height: 100px;      </span><br><span class="line">    background-color: aquamarine;      </span><br><span class="line">    animation-name: move;      </span><br><span class="line">    animation-duration: 0.5s;    </span><br><span class="line">    &#125;    </span><br><span class="line">    @keyframes move&#123;      </span><br><span class="line">    0% &#123;        </span><br><span class="line">    transform: translate(0px)      </span><br><span class="line">    &#125;      </span><br><span class="line">    100% &#123;        </span><br><span class="line">    transform: translate(500px, 0)      </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;  </span><br><span class="line">    &lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
 
 <h5 id="常见属性"><a href="#常见属性" class="headerlink" title="常见属性"></a>常见属性</h5><table>
 <thead>
@@ -1453,7 +1453,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <td>规定动画结束后状态，留在结束点forwards，回到起始backwards</td>
 </tr>
 </tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：div &#123;  width: 100px;  height: 100px;  background-color: aquamarine;  &#x2F;* 动画名称 *&#x2F;  animation-name: move;  &#x2F;* 动画花费时长 *&#x2F;  animation-duration: 2s;  &#x2F;* 动画速度曲线 *&#x2F;  animation-timing-function: ease-in-out;  &#x2F;* 动画等待多长时间执行 *&#x2F;  animation-delay: 2s;  &#x2F;* 规定动画播放次数 infinite: 无限循环 *&#x2F;  animation-iteration-count: infinite;  &#x2F;* 是否逆行播放 *&#x2F;  animation-direction: alternate;  &#x2F;* 动画结束之后的状态 *&#x2F;  animation-fill-mode: forwards;&#125;div:hover &#123;  &#x2F;* 规定动画是否暂停或者播放 *&#x2F;  animation-play-state: paused;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">div &#123;  </span><br><span class="line">	width: 100px;  </span><br><span class="line">	height: 100px;  </span><br><span class="line">	background-color: aquamarine;  </span><br><span class="line">	&#x2F;* 动画名称 *&#x2F;  </span><br><span class="line">	animation-name: move;  </span><br><span class="line">	&#x2F;* 动画花费时长 *&#x2F;  </span><br><span class="line">	animation-duration: 2s;  </span><br><span class="line">	&#x2F;* 动画速度曲线 *&#x2F;  </span><br><span class="line">	animation-timing-function: ease-in-out;  </span><br><span class="line">	&#x2F;* 动画等待多长时间执行 *&#x2F;  </span><br><span class="line">	animation-delay: 2s;  </span><br><span class="line">	&#x2F;* 规定动画播放次数 infinite: 无限循环 *&#x2F;  </span><br><span class="line">	animation-iteration-count: infinite;  </span><br><span class="line">	&#x2F;* 是否逆行播放 *&#x2F;  </span><br><span class="line">	animation-direction: alternate;  </span><br><span class="line">	&#x2F;* 动画结束之后的状态 *&#x2F;  </span><br><span class="line">	animation-fill-mode: forwards;</span><br><span class="line">&#125;</span><br><span class="line">div:hover &#123; </span><br><span class="line">	&#x2F;* 规定动画是否暂停或者播放 *&#x2F;  </span><br><span class="line">	animation-play-state: paused;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="动画简写方式"><a href="#动画简写方式" class="headerlink" title="动画简写方式"></a>动画简写方式</h5><p>animation:动画名称 持续时间 运动时间 何时开始 播放次数 是否反向 动画起始或者结束的状态；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：animation: myfirst 5s linear 2s infinite alternate;</span><br></pre></td></tr></table></figure>
@@ -1462,7 +1462,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>暂停动画：animation-play-state: puase;经常和鼠标经过等其他配合使用</p>
 <p>想要动画走回来，而不是直接跳回来：animation-direction : alternate</p>
 <p>盒子动画结束后，停在结束位置: animation-fill-mode : forwards</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-timing-function:规定动画的速度曲线，默认&quot;ease&quot;linear	动画从头到尾的速度是相同。匀速ease	默认。动画以低速开始，然后加快，在结束前变慢。ease-in	动画以低速开始。ease-out	动画以低速结束。ease-in-out	动画以低速开始和结束steps()	指定了时间函数中的间隔数量(步长)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">animation-timing-function:规定动画的速度曲线，默认&quot;ease&quot;linear	</span><br><span class="line">动画从头到尾的速度是相同。匀速ease	默认。动画以低速开始，然后加快，在结束前变慢。ease-in	</span><br><span class="line">动画以低速开始。ease-out	</span><br><span class="line">动画以低速结束。ease-in-out	</span><br><span class="line">动画以低速开始和结束steps()	</span><br><span class="line">指定了时间函数中的间隔数量(步长)</span><br></pre></td></tr></table></figure>
 
 <h2 id="3D转换"><a href="#3D转换" class="headerlink" title="3D转换"></a>3D转换</h2><h5 id="3D-的特点"><a href="#3D-的特点" class="headerlink" title="3D 的特点"></a><code>3D</code> 的特点</h5><ul>
 <li>近大远小</li>
@@ -1567,7 +1567,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 
 <h2 id="css3盒子写法"><a href="#css3盒子写法" class="headerlink" title="css3盒子写法"></a>css3盒子写法</h2><p>box-sizing:border-box;将不用计算border和padding多增加的宽度</p>
 <p>box-sizing：content-box;传统盒子模型</p>
-<h2 id="特殊样式"><a href="#特殊样式" class="headerlink" title="特殊样式"></a>特殊样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*css3盒子模型*&#x2F;box-sizing:border-box;-webkit-box-sizing:border-box;&#x2F;*点击高亮我们需要清楚 设置为transparent 完全透明*&#x2F;-webkit-tap-highlight-color:transparent;&#x2F;*在移动端浏览器默认的外观在ios上加上这个属性才恩那个给按钮和输入框自定义样式*&#x2F;-webkit-appearance:none;&#x2F;*禁用长按页面时的弹出菜单*&#x2F;img,a&#123;-webkit-touch-callout:none;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="特殊样式"><a href="#特殊样式" class="headerlink" title="特殊样式"></a>特殊样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*css3盒子模型*&#x2F;</span><br><span class="line">box-sizing:border-box;-webkit-box-sizing:border-box;</span><br><span class="line">&#x2F;*点击高亮我们需要清楚 设置为transparent 完全透明*&#x2F;</span><br><span class="line">-webkit-tap-highlight-color:transparent;</span><br><span class="line">&#x2F;*在移动端浏览器默认的外观在ios上加上这个属性才恩那个给按钮和输入框自定义样式*&#x2F;</span><br><span class="line">-webkit-appearance:none;</span><br><span class="line">&#x2F;*禁用长按页面时的弹出菜单*&#x2F;</span><br><span class="line">img,a&#123;-webkit-touch-callout:none;&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="移动端技术选择"><a href="#移动端技术选择" class="headerlink" title="移动端技术选择"></a>移动端技术选择</h1><h3 id="1、单独制作移动端页面-主流"><a href="#1、单独制作移动端页面-主流" class="headerlink" title="1、单独制作移动端页面(主流)"></a>1、单独制作移动端页面(主流)</h3><ul>
 <li>流式布局（百分比布局）</li>
@@ -1586,7 +1586,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <p>流式布局方式是移动web开发使用的比较常见的布局方式。</p>
 <p>通过</p>
 <p>max-width 最大宽度（max-height最大高度）<br>min-widht 最小宽度（min-height最小高度）</p>
-<h3 id="2、flex弹性布局-iE9级浏览器适用"><a href="#2、flex弹性布局-iE9级浏览器适用" class="headerlink" title="2、flex弹性布局(iE9级浏览器适用)"></a>2、flex弹性布局(iE9级浏览器适用)</h3><h4 id="flex布局原理"><a href="#flex布局原理" class="headerlink" title="flex布局原理"></a>flex布局原理</h4><ul>
+<h3 id="flex弹性布局-iE9级浏览器适用"><a href="#flex弹性布局-iE9级浏览器适用" class="headerlink" title="flex弹性布局(iE9级浏览器适用)"></a>flex弹性布局(iE9级浏览器适用)</h3><h4 id="flex布局原理"><a href="#flex布局原理" class="headerlink" title="flex布局原理"></a>flex布局原理</h4><ul>
 <li>flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</li>
 <li>当我们为父盒子设为 flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。</li>
 <li>flex布局又叫伸缩布局 、弹性布局 、伸缩盒布局 、弹性盒布局 </li>
@@ -1594,7 +1594,7 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 </ul>
 <p><strong>总结</strong>：就是通过给父盒子添加flex属性，来控制子盒子的位置和排列方式</p>
 <p>在父级元素中加入flex</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例：display:flex;&#123;在flex布局中，子元素的float、clear和vertical-align属性将失效&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">display:flex;&#123;在flex布局中，子元素的float、clear和vertical-align属性将失效&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="父项常见属性"><a href="#父项常见属性" class="headerlink" title="父项常见属性"></a>父项常见属性</h4><h5 id="flex-direnction-设置主轴的方向；"><a href="#flex-direnction-设置主轴的方向；" class="headerlink" title="flex-direnction:设置主轴的方向；"></a>flex-direnction:设置主轴的方向；</h5><ul>
 <li>在 flex 布局中，是分为主轴和侧轴两个方向，同样的叫法有 ： 行和列、x 轴和y 轴</li>
@@ -1651,7 +1651,12 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <h5 id="flex-warp-设置子元素是否换行；"><a href="#flex-warp-设置子元素是否换行；" class="headerlink" title="flex-warp:设置子元素是否换行；"></a>flex-warp:设置子元素是否换行；</h5><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，flex布局中默认是不换行的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nowarp;不换行warp；自动换行</span><br></pre></td></tr></table></figure>
 
-<h5 id="align-content-设置侧轴上的子元素的排列方式-多行-；"><a href="#align-content-设置侧轴上的子元素的排列方式-多行-；" class="headerlink" title="align-content:设置侧轴上的子元素的排列方式(多行)；"></a>align-content:设置侧轴上的子元素的排列方式(多行)；</h5><pre><code>flex-start;默认值在侧轴的头部开始排列flex-end;在侧轴的尾部开始排列center；在侧轴中间显示space-around;子项在侧轴平分剩余空间space-between;子项在侧轴先分布在两头，在平分剩余空间stretch;设置子项元素高度平分父元素高度</code></pre>
+<h5 id="align-content-设置侧轴上的子元素的排列方式-多行-；"><a href="#align-content-设置侧轴上的子元素的排列方式-多行-；" class="headerlink" title="align-content:设置侧轴上的子元素的排列方式(多行)；"></a>align-content:设置侧轴上的子元素的排列方式(多行)；</h5><pre><code>flex-start;默认值在侧轴的头部开始排列flex-end;
+在侧轴的尾部开始排列center；
+在侧轴中间显示space-around;
+子项在侧轴平分剩余空间space-between;
+子项在侧轴先分布在两头，在平分剩余空间stretch;
+设置子项元素高度平分父元素高度</code></pre>
 <h5 id="align-items-设置侧轴上的子元素排列方式-单行-；"><a href="#align-items-设置侧轴上的子元素排列方式-单行-；" class="headerlink" title="align-items:设置侧轴上的子元素排列方式(单行)；"></a>align-items:设置侧轴上的子元素排列方式(单行)；</h5><p>设置子项在侧轴上的排列方式 并且只能用于子项出现 换行 的情况（多行），在单行下是没有效果的。</p>
 <pre><code>flex-start;默认值从上到下flex-end；从下到上center；挤在一起居中(垂直居中)stretch；拉伸</code></pre>
 <h5 id="align-content-和align-items区别"><a href="#align-content-和align-items区别" class="headerlink" title="align-content 和align-items区别"></a>align-content 和align-items区别</h5><ul>
@@ -1659,18 +1664,17 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <li>align-content适应于换行（多行）的情况下（单行情况下无效）， 可以设置 上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。 </li>
 <li>总结就是单行找align-items  多行找 align-content</li>
 </ul>
-<h5 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h5><p>:复合属性，相当于同时设置了flex-direction和flex-warp;</p>
+<h5 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow:"></a>flex-flow:</h5><p>复合属性，相当于同时设置了flex-direction和flex-warp;</p>
 <h5 id="flex："><a href="#flex：" class="headerlink" title="flex："></a>flex：</h5><p>让div独占一份</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	flex: 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+<h5 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h5><p>:属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。<br>默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于strech。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例：	span:nth-child(2)&#123;</span><br><span class="line">		align-self:flex-end;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h5><p>:属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。<br>默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于strech。<br>例：    span:nth-child(2){<br>        align-self:flex-end;<br>    }</p>
 <h5 id="order"><a href="#order" class="headerlink" title="order"></a>order</h5><p>属性数值越小，排名越靠前，默认为0；<br>注意：和z-index不一样</p>
-<p>div {</p>
-<p>​    //把位置移到第一个盒子前面</p>
-<p>​    order: -1</p>
-<p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line"></span><br><span class="line">​	&#x2F;&#x2F;把位置移到第一个盒子前面</span><br><span class="line"></span><br><span class="line">​	order: -1</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="less-rem-媒体查询布局"><a href="#less-rem-媒体查询布局" class="headerlink" title="less+rem+媒体查询布局"></a>less+rem+媒体查询布局</h3><h4 id="rem基础"><a href="#rem基础" class="headerlink" title="rem基础"></a>rem基础</h4><h5 id="rem单位"><a href="#rem单位" class="headerlink" title="rem单位"></a>rem单位</h5><p>rem (root em)是一个相对单位，类似于em，em是父元素字体大小。</p>
 <p>不同的是rem的基准是相对于html元素的字体大小。</p>
 <p>比如，根元素（html）设置font-size=12px; 非根元素设置width:2rem; 则换成px表示就是24px。</p>
@@ -1778,16 +1782,81 @@ color：16进制#00（红色）00（绿色）00（蓝色）color:rgb(000.000.000
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@border: 5px + 5;</span><br><span class="line">div &#123;</span><br><span class="line">	width: 200px -50;</span><br><span class="line">	height: 200px * 2;</span><br><span class="line">	border: @border solid red;</span><br><span class="line">&#125;</span><br><span class="line">img &#123;</span><br><span class="line">	width: 82 &#x2F; 50rem</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="file://J:/%E9%BB%91%E9%A9%AC/04-06%20%E7%A7%BB%E5%8A%A8Web%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91/03-%E7%A7%BB%E5%8A%A8web%E5%BC%80%E5%8F%91%E8%B5%84%E6%96%99/03-%E7%A7%BB%E5%8A%A8WEB%E5%BC%80%E5%8F%91_rem%E5%B8%83%E5%B1%80/4-%E7%AC%94%E8%AE%B0/images/3.png?lastModify=1617893265" alt="img"></p>
-<h4 id="bootstarp"><a href="#bootstarp" class="headerlink" title="bootstarp"></a>bootstarp</h4><p>1.container类</p>
+<h3 id="bootstarp"><a href="#bootstarp" class="headerlink" title="bootstarp"></a>bootstarp</h3><h4 id="bootstrap布局容器"><a href="#bootstrap布局容器" class="headerlink" title="bootstrap布局容器"></a>bootstrap布局容器</h4><p>1.container类</p>
 <p>响应式布局的容器 固定宽度</p>
 <p>大屏(&gt;=1200px) 宽度定为1170px</p>
 <p>中屏(&gt;=992px) 宽度定为970px</p>
 <p>小屏(&gt;=992px) 宽度定为750px</p>
-<p>超小屏(100%)</p>
+<p>超小屏（手机，&lt;768px）(100%)</p>
 <p>2.container-fluid类</p>
 <p>流式布局容器 百分百宽度</p>
 <p>占据全部视口(viewport)的容器</p>
 <p>适合单于做移动端开发</p>
+<h4 id="bootstrap栅格系统"><a href="#bootstrap栅格系统" class="headerlink" title="bootstrap栅格系统"></a>bootstrap栅格系统</h4><p>Bootstrap提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。</p>
+<p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。</p>
+<ul>
+<li>按照不同屏幕划分为1~12 等份</li>
+<li>行（row） 可以去除父容器作用15px的边距</li>
+<li>xs-extra small：超小； sm-small：小；  md-medium：中等； lg-large：大；</li>
+<li>列（column）大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列</li>
+<li>每一列默认有左右15像素的 padding</li>
+<li>可以同时为一列指定多个设备的类名，以便划分不同份数  例如 class=”col-md-4 col-sm-6”</li>
+</ul>
+<p>栅格嵌套</p>
+<p>栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一个列内再分成若干份小列。我们可以通过添加一个新的 .row 元素和一系列 .col-sm-* 元素到已经存在的 .col-sm-*<br>元素内。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 列嵌套 --&gt;</span><br><span class="line"> &lt;div class&#x3D;&quot;col-sm-4&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;row&quot;&gt;</span><br><span class="line">         &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;小列&lt;&#x2F;div&gt;</span><br><span class="line">         &lt;div class&#x3D;&quot;col-sm-6&quot;&gt;小列&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>列偏移</p>
+<p>使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 列偏移 --&gt;</span><br><span class="line"> &lt;div class&#x3D;&quot;row&quot;&gt;</span><br><span class="line">     &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;1&lt;&#x2F;div&gt;</span><br><span class="line">     &lt;div class&#x3D;&quot;col-lg-4 col-lg-offset-4&quot;&gt;2&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>列排序</p>
+<p>通过使用 .col-md-push-* 和 .col-md-pull-* 类就可以很容易的改变列（column）的顺序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 列排序 --&gt;</span><br><span class="line"> &lt;div class&#x3D;&quot;row&quot;&gt;</span><br><span class="line">     &lt;div class&#x3D;&quot;col-lg-4 col-lg-push-8&quot;&gt;左侧&lt;&#x2F;div&gt;</span><br><span class="line">     &lt;div class&#x3D;&quot;col-lg-8 col-lg-pull-4&quot;&gt;右侧&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>响应式工具</p>
+<p>为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容。</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>超小屏</th>
+<th>小屏</th>
+<th>中屏</th>
+<th>大屏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hidden-xs</td>
+<td>隐藏</td>
+<td>可见</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>.hidden-sm</td>
+<td>可见</td>
+<td>隐藏</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>.hidden-md</td>
+<td>可见</td>
+<td>可见</td>
+<td>隐藏</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>.hidden-lg</td>
+<td>可见</td>
+<td>可见</td>
+<td>可见</td>
+<td>隐藏</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">&lt;style&gt;</span><br><span class="line">	.container &#123;</span><br><span class="line">		height: 150px</span><br><span class="line">		background-color: pink;</span><br><span class="line">		marigin: 0 auto;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;* 超小屏幕下 小于768*&#x2F;</span><br><span class="line">	@media screen and (max-width: 767px) &#123;</span><br><span class="line">		.container &#123;</span><br><span class="line">		width: 100%</span><br><span class="line">		&#125;</span><br><span class="line">	&#x2F;* 小屏幕下 大于等于768*&#x2F;</span><br><span class="line">	@media screen and (min-width: 768px) &#123;</span><br><span class="line">		width: 750px</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;* 中等屏幕下 大于等于992*&#x2F;</span><br><span class="line">	@meida screen and (min-width: 992) &#123;</span><br><span class="line">		.container &#123;</span><br><span class="line">			width: 970px</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;* 大屏幕下 大于等于1200*&#x2F;</span><br><span class="line">	@meida screen and (min-width: 1200) &#123;</span><br><span class="line">		.container &#123;</span><br><span class="line">			width: 1200px</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;steyl&gt;</span><br></pre></td></tr></table></figure>
+
 
       
 
