@@ -266,19 +266,19 @@
 
 
   
-    <article id="post-数组去重" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-内置方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">数组去重</a>
+      <a class="article-title" href="/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/">内置方法</a>
     </h1>
   
 
         
-        <a href="/2020/11/19/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" class="archive-article-date">
+        <a href="/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/" class="archive-article-date">
   	<time datetime="2020-11-19T13:18:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-19</time>
 </a>
         
@@ -286,8 +286,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断一个字符串 &#x27;abcoefoxyozzopp&#x27; 中出现次数最多的字符，并统计其次数</span></span><br><span class="line"><span class="comment">// 核心算法：利用 charAt() 遍历这个字符串</span></span><br><span class="line"><span class="comment">// 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1</span></span><br><span class="line"><span class="comment">// 遍历对象，得到最大值和该字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;abcoefoxyozzopp&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> chars = str.charAt(i) <span class="comment">//chars是字符串的每一个字符</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[chars]</span>)</span> &#123; <span class="comment">// o[chars] 得到的是属性值</span></span><br><span class="line">        o[chars]++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        o[chars] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br><span class="line"><span class="keyword">var</span> ch = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="comment">//2.遍历对象</span></span><br><span class="line"><span class="keyword">var</span> max = o;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> o) &#123;</span><br><span class="line">    <span class="comment">//k 得到的是属性名</span></span><br><span class="line">    <span class="comment">// o[k] 得到的是属性值</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[k] &gt; max</span>)</span> &#123;</span><br><span class="line">        max = o[k]</span><br><span class="line">        ch = k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="Math方法："><a href="#Math方法：" class="headerlink" title="Math方法："></a>Math方法：</h1><p>max：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    max: function () &#123;</span><br><span class="line">        var max &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &gt; max) &#123;</span><br><span class="line">                max &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>min:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    min: function () &#123;</span><br><span class="line">        var min &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &lt; min) &#123;</span><br><span class="line">                min &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return min</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Arrary"><a href="#Arrary" class="headerlink" title="Arrary:"></a>Arrary:</h1><p>reverse:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function reverse(arr) &#123;</span><br><span class="line">	if (arr instanceof Array) &#123;</span><br><span class="line">		var newArr &#x3D; []</span><br><span class="line">	for (var i &#x3D; arr.length -1; i--) &#123;</span><br><span class="line">		newArr[newArr.length] &#x3D; arr[i]</span><br><span class="line">		&#125;</span><br><span class="line">	return newArr</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		return &#39;not Array&#39;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="String"><a href="#String" class="headerlink" title="String:"></a>String:</h1><p>indxOf判断字符串出现次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var  str &#x3D; &#39;oabsdfajkosdfaso&#39;</span><br><span class="line">var index &#x3D; str.indexOf(&#39;o&#39;)</span><br><span class="line">var num &#x3D; 0</span><br><span class="line">while (index !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">	num++</span><br><span class="line">	index &#x3D; str.indexOf(&#39;o&#39;, index + 1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>charAt统计出现的字母的次数和出现最多的字母</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断一个字符串 &#x27;abcoefoxyozzopp&#x27; 中出现次数最多的字符，并统计其次数</span></span><br><span class="line"><span class="comment">// 核心算法：利用 charAt() 遍历这个字符串</span></span><br><span class="line"><span class="comment">// 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1</span></span><br><span class="line"><span class="comment">// 遍历对象，得到最大值和该字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;abcoefoxyozzopp&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> chars = str.charAt(i) <span class="comment">//chars是字符串的每一个字符</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[chars]</span>)</span> &#123; <span class="comment">// o[chars] 得到的是属性值</span></span><br><span class="line">        o[chars]++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        o[chars] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br><span class="line"><span class="keyword">var</span> ch = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="comment">//2.遍历对象</span></span><br><span class="line"><span class="keyword">var</span> max = o;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> o) &#123;</span><br><span class="line">    <span class="comment">//k 得到的是属性名</span></span><br><span class="line">    <span class="comment">// o[k] 得到的是属性值</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[k] &gt; max</span>)</span> &#123;</span><br><span class="line">        max = o[k]</span><br><span class="line">        ch = k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -301,7 +313,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">手写</a>
         		</li>
       		
 		</ul>
@@ -311,7 +323,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/19/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -416,19 +428,19 @@
 
 
   
-    <article id="post-时间戳" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/16/%E6%97%B6%E9%97%B4%E6%88%B3/">时间戳</a>
+      <a class="article-title" href="/2020/11/16/%E6%8F%92%E4%BB%B6/">插件</a>
     </h1>
   
 
         
-        <a href="/2020/11/16/%E6%97%B6%E9%97%B4%E6%88%B3/" class="archive-article-date">
+        <a href="/2020/11/16/%E6%8F%92%E4%BB%B6/" class="archive-article-date">
   	<time datetime="2020-11-16T11:15:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-16</time>
 </a>
         
@@ -436,8 +448,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">countDown</span>(<span class="params">tiem</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nowTime = +<span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//返回的是当前时间总的毫秒</span></span><br><span class="line">    <span class="keyword">var</span> inputTime = +<span class="keyword">new</span> <span class="built_in">Date</span>(tiem); <span class="comment">//返回的是用户输入时间总的毫秒</span></span><br><span class="line">    <span class="keyword">var</span> times = (inputTime - nowTime) / <span class="number">1000</span>; <span class="comment">// times是剩余时间的总秒数</span></span><br><span class="line">    <span class="keyword">var</span> d = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>); <span class="comment">//天</span></span><br><span class="line">    d = d &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +d : d;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> % <span class="number">24</span>); <span class="comment">//时</span></span><br><span class="line">    h = h &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +h : h;</span><br><span class="line">    <span class="keyword">var</span> m = <span class="built_in">parseInt</span>(times / <span class="number">60</span> % <span class="number">60</span>); <span class="comment">//分</span></span><br><span class="line">    m = m &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +m : m;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">parseInt</span>(times % <span class="number">60</span>);  <span class="comment">//当前的秒</span></span><br><span class="line">    s = s &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +s : s;</span><br><span class="line">    <span class="keyword">return</span> d + <span class="string">&#x27;天&#x27;</span> + <span class="string">&#x27;时&#x27;</span> + h + <span class="string">&#x27;分&#x27;</span> + m + <span class="string">&#x27;秒&#x27;</span> + s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(countDown(<span class="string">&#x27;2020-11-19 18:00:00&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
+        <p>时间戳</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">countDown</span>(<span class="params">tiem</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> nowTime = +<span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//返回的是当前时间总的毫秒</span></span><br><span class="line">    <span class="keyword">var</span> inputTime = +<span class="keyword">new</span> <span class="built_in">Date</span>(tiem); <span class="comment">//返回的是用户输入时间总的毫秒</span></span><br><span class="line">    <span class="keyword">var</span> times = (inputTime - nowTime) / <span class="number">1000</span>; <span class="comment">// times是剩余时间的总秒数</span></span><br><span class="line">    <span class="keyword">var</span> d = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>); <span class="comment">//天</span></span><br><span class="line">    d = d &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +d : d;</span><br><span class="line">    <span class="keyword">var</span> h = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> % <span class="number">24</span>); <span class="comment">//时</span></span><br><span class="line">    h = h &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +h : h;</span><br><span class="line">    <span class="keyword">var</span> m = <span class="built_in">parseInt</span>(times / <span class="number">60</span> % <span class="number">60</span>); <span class="comment">//分</span></span><br><span class="line">    m = m &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +m : m;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">parseInt</span>(times % <span class="number">60</span>);  <span class="comment">//当前的秒</span></span><br><span class="line">    s = s &lt; <span class="number">10</span> ? <span class="string">&#x27;0&#x27;</span> +s : s;</span><br><span class="line">    <span class="keyword">return</span> d + <span class="string">&#x27;天&#x27;</span> + <span class="string">&#x27;时&#x27;</span> + h + <span class="string">&#x27;分&#x27;</span> + m + <span class="string">&#x27;秒&#x27;</span> + s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(countDown(<span class="string">&#x27;2020-11-19 18:00:00&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
       
 
@@ -451,7 +463,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">手写</a>
         		</li>
       		
 		</ul>
@@ -461,7 +473,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/16/%E6%97%B6%E9%97%B4%E6%88%B3/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/11/16/%E6%8F%92%E4%BB%B6/">展开全文 >></a>
         </p>
       
 
@@ -621,6 +633,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">vue项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">手写</a>
               </li>
             
             <div class="clearfix"></div>

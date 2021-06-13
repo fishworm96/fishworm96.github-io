@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>ajax笔记 | 梦开始的地方</title>
+  <title>内置方法 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ajax基础Ajax的应用场景1.页面上拉加载更多数据 2.列表数据无刷新分页 3.表单项离开焦点数据证 4.搜索框提示文字下拉列表">
+  <meta name="description" content="Math方法：max： 1234567891011var math &#x3D; &amp;#123;    max: function () &amp;#123;        var max &#x3D; arguments[0]        for (var i &#x3D; 1; i &lt; arguments.length; i++) &amp;#123;            if (arguments[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ajax笔记">
-<meta property="og:url" content="http://example.com/2021/04/21/ajax%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="内置方法">
+<meta property="og:url" content="http://example.com/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="Ajax基础Ajax的应用场景1.页面上拉加载更多数据 2.列表数据无刷新分页 3.表单项离开焦点数据证 4.搜索框提示文字下拉列表">
+<meta property="og:description" content="Math方法：max： 1234567891011var math &#x3D; &amp;#123;    max: function () &amp;#123;        var max &#x3D; arguments[0]        for (var i &#x3D; 1; i &lt; arguments.length; i++) &amp;#123;            if (arguments[">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-21T13:46:40.000Z">
-<meta property="article:modified_time" content="2021-04-23T05:22:31.239Z">
+<meta property="article:published_time" content="2020-11-19T13:18:56.000Z">
+<meta property="article:modified_time" content="2021-06-13T15:07:46.005Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="ajax">
+<meta property="article:tag" content="手写">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="梦开始的地方" type="application/atom+xml">
@@ -155,261 +155,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ajax笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-内置方法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ajax笔记
+      内置方法
     </h1>
   
 
         
-        <a href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-21T13:46:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
+        <a href="/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-11-19T13:18:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Ajax基础"><a href="#Ajax基础" class="headerlink" title="Ajax基础"></a>Ajax基础</h1><h2 id="Ajax的应用场景"><a href="#Ajax的应用场景" class="headerlink" title="Ajax的应用场景"></a>Ajax的应用场景</h2><p>1.页面上拉加载更多数据</p>
-<p>2.列表数据无刷新分页</p>
-<p>3.表单项离开焦点数据证</p>
-<p>4.搜索框提示文字下拉列表</p>
-<a id="more"></a>
+        <h1 id="Math方法："><a href="#Math方法：" class="headerlink" title="Math方法："></a>Math方法：</h1><p>max：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    max: function () &#123;</span><br><span class="line">        var max &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &gt; max) &#123;</span><br><span class="line">                max &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Ajax的运行环境"><a href="#Ajax的运行环境" class="headerlink" title="Ajax的运行环境"></a>Ajax的运行环境</h2><p>Ajax技术需要运行在网站环境中才能生效，当前课程会使用Node创建的服务器作为网站服务器</p>
-<h2 id="Ajax运行原理"><a href="#Ajax运行原理" class="headerlink" title="Ajax运行原理"></a>Ajax运行原理</h2><p>Ajax相当于浏览器发送请求与接受相应的代理人，以实现在不影响用户浏览页面的情况下，局部更新页面数据，从而提高用户体验。</p>
-<h2 id="Ajax的实现步骤"><a href="#Ajax的实现步骤" class="headerlink" title="Ajax的实现步骤"></a>Ajax的实现步骤</h2><p>1.创建Ajax对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+<p>min:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    min: function () &#123;</span><br><span class="line">        var min &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &lt; min) &#123;</span><br><span class="line">                min &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return min</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2.告诉Ajax请求地址以及请求方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#39;get&#x2F;post&#39;, &#39;http:&#x2F;&#x2F;www.example.com&#39;);</span><br></pre></td></tr></table></figure>
+<h1 id="Arrary"><a href="#Arrary" class="headerlink" title="Arrary:"></a>Arrary:</h1><p>reverse:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function reverse(arr) &#123;</span><br><span class="line">	if (arr instanceof Array) &#123;</span><br><span class="line">		var newArr &#x3D; []</span><br><span class="line">	for (var i &#x3D; arr.length -1; i--) &#123;</span><br><span class="line">		newArr[newArr.length] &#x3D; arr[i]</span><br><span class="line">		&#125;</span><br><span class="line">	return newArr</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		return &#39;not Array&#39;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>3.发送请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+<h1 id="String"><a href="#String" class="headerlink" title="String:"></a>String:</h1><p>indxOf判断字符串出现次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var  str &#x3D; &#39;oabsdfajkosdfaso&#39;</span><br><span class="line">var index &#x3D; str.indexOf(&#39;o&#39;)</span><br><span class="line">var num &#x3D; 0</span><br><span class="line">while (index !&#x3D;&#x3D; -1) &#123;</span><br><span class="line">	num++</span><br><span class="line">	index &#x3D; str.indexOf(&#39;o&#39;, index + 1)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>4.获取服务器端与客户端的响应数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload &#x3D; function () &#123;</span><br><span class="line">	console.log(xhr.responseText);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="服务器端响应的数据格式"><a href="#服务器端响应的数据格式" class="headerlink" title="服务器端响应的数据格式"></a>服务器端响应的数据格式</h2><p>在真实的项目中，服务器端大多数情况下会以JSON对线作为响应数据的格式。当客户端拿到相应数据时，要将JSON数据和HTML字符串进行拼接，然后将拼接的结果展示在页面中。</p>
-<p>在http请求与响应的过程中，无论是请求参数还是响应内容，如果是对象类型，最终都会被转换为对象字符串进行输出。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse() &#x2F;&#x2F;将json字符串转换为json对象</span><br></pre></td></tr></table></figure>
-
-<h2 id="请求参数传递"><a href="#请求参数传递" class="headerlink" title="请求参数传递"></a>请求参数传递</h2><p>传统网站表单提交</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method&#x3D;&quot;get&quot; action&#x3D;&quot;http:&#x2F;&#x2F;www.example.com&quot;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;text&quot; name&#x3D;&#39;username&#39;&#x2F;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line">&lt;!- http:&#x2F;&#x2F;www.example.com?username&#x3D;zhangsan&amp;password&#x3D;123456 --&gt;</span><br></pre></td></tr></table></figure>
-
-<p>GET请求方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#39;get&#39;, &#39;http:&#x2F;&#x2F;www.example.com?name&#x3D;zhangsan&amp;age&#x3D;20&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>POST请求方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(&#39;Content-Type&#39;, &#39;application&#x2F;x-www-form-urlencoded&#39;)</span><br><span class="line">xhr.send(&#39;name&#x3D;zhangsan&amp;age&#x3D;20&#39;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="请求参数格式"><a href="#请求参数格式" class="headerlink" title="请求参数格式"></a>请求参数格式</h2><p>1.application/x-www-form-urlencoded</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name&#x3D;zhangsan&amp;age&#x3D;20&amp;sex&#x3D;男</span><br></pre></td></tr></table></figure>
-
-<p>2.application/json</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;naem:&#39;zhangsan&#39;, age&#x3D;&#39;20&#39;, sex:&#39;男&#39;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在请求头中指定Content-Type属性的值是application/json，告诉服务器端当前请求参数的格式是json</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.stringify() &#x2F;&#x2F;将json对象转换为json字符串</span><br></pre></td></tr></table></figure>
-
-<p>注意：get请求是不能提交json对象数据类型的，传统网站的表单提交也是不支持json对象数据格式的。</p>
-<h2 id="获取服务器端的响应"><a href="#获取服务器端的响应" class="headerlink" title="获取服务器端的响应"></a>获取服务器端的响应</h2><h3 id="Ajax状态码"><a href="#Ajax状态码" class="headerlink" title="Ajax状态码"></a>Ajax状态码</h3><p>在创建ajax对象，配置ajax对象，发送请求，以及接收完服务器端响应数据，这个过程中的每一个步骤都会对应一个数值，这个数值就是ajax状态码</p>
-<p>0：请求未初始化(还没有调用open())</p>
-<p>1：请求已经建立，但是还没有发送(还没有调用send())</p>
-<p>2：请求已经发送</p>
-<p>3：请求正在处理中，通常响应中已经有部分数据可以用了</p>
-<p>4：响应已经完成，可以获取并使用服务器的响应了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.readyState &#x2F;&#x2F;获取Ajax状态码</span><br></pre></td></tr></table></figure>
-
-<p>两种获取服务器端响应方式的区别</p>
-<table>
-<thead>
-<tr>
-<th>区别描述</th>
-<th>onload事件</th>
-<th>onreadystatechange事件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>是否兼容IE低版本</td>
-<td>不兼容</td>
-<td>兼容</td>
-</tr>
-<tr>
-<td>是否需要判断Ajax状态码</td>
-<td>不需要</td>
-<td>需要</td>
-</tr>
-<tr>
-<td>被调用次数</td>
-<td>一次</td>
-<td>多次</td>
-</tr>
-</tbody></table>
-<h2 id="Ajax错误处理"><a href="#Ajax错误处理" class="headerlink" title="Ajax错误处理"></a>Ajax错误处理</h2><p>1.网络通常，服务器端能接收到请求，服务器端返回的结果不是预期结果</p>
-<p>可以判断服务器端的返回码，分别进行处理。xhr.status获取http状态码</p>
-<p>2.网络通常，服务器端没有接收到请求，返回404状态码</p>
-<p>检查请求地址是否错误</p>
-<p>3.网络通常，服务器端能接收到请求，服务器端返回500状态码</p>
-<p>服务器端错误，找后端程序员进行沟通</p>
-<p>4.网络中断，请求无法发送到服务器端</p>
-<p>会触发xhr对象下面的onerror事件，在onerror事件处理函数中对错误进行处理</p>
-<h2 id="低版本IE浏览器的缓存问题"><a href="#低版本IE浏览器的缓存问题" class="headerlink" title="低版本IE浏览器的缓存问题"></a>低版本IE浏览器的缓存问题</h2><p>问题：在低版本的 IE 浏览器中，Ajax 请求有严重的缓存问题，即在请求地址不发生变化的情况下，只有第一次请求会真正发送到服务器端，后续的请求都会从浏览器的缓存中获取结果。即使服务器端的数据更新了，客户端依然拿到的是缓存中的旧数据。</p>
-<p>解决方案：在请求地址的后面加请求参数，保证每一次请求中的请求参数的值不相同。 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#39;get&#39;, &#39;http:&#x2F;&#x2F;www.example.com?t&#39;+ Math.random());</span><br></pre></td></tr></table></figure>
-
-<h2 id="同步异步概述"><a href="#同步异步概述" class="headerlink" title="同步异步概述"></a><strong>同步异步概述</strong></h2><p><strong>同步</strong></p>
-<p>l 一个人同一时间只能做一件事情，只有一件事情做完，才能做另外一件事情。</p>
-<p>l 落实到代码中，就是上一行代码执行完成后，才能执行下一行代码，即代码逐行执行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(&#39;before&#39;);</span><br><span class="line"></span><br><span class="line">console.log(&#39;after&#39;);</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>异步</strong></p>
-<p>l一个人一件事情做了一半，转而去做其他事情，当其他事情做完以后，再回过头来继续做之前未完成的事情。</p>
-<p>l落实到代码上，就是异步代码虽然需要花费时间去执行，但程序不会等待异步代码执行完成后再继续执行后续代码，而是直接执行后续代码，当后续代码执行完成后再回头看异步代码是否返回结果，如果已有返回结果，再调用事先准备好的回调函数处理异步代码执行的结果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">console**.**log**(**&#39;before&#39;**);**</span><br><span class="line"></span><br><span class="line">**setTimeout****(**</span><br><span class="line"></span><br><span class="line"> **()** **&#x3D;&gt;** **&#123;** console**.**log**(**&#39;last&#39;**);**</span><br><span class="line"></span><br><span class="line">**&#125;,** 2000**);**</span><br><span class="line"></span><br><span class="line">console**.**log**(**&#39;after&#39;**);</span><br></pre></td></tr></table></figure>
-
-<h1 id="AJax异步编程"><a href="#AJax异步编程" class="headerlink" title="AJax异步编程"></a>AJax异步编程</h1><h2 id="Ajax封装"><a href="#Ajax封装" class="headerlink" title="Ajax封装"></a>Ajax封装</h2><p>问题：发送一次请求代码过多，发送多次请求代码冗余且负责</p>
-<p>解决方案：将请求代码封装到函数中，发送请求时调用函数即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ajax(&#123;</span><br><span class="line">	type: &#39;get&#39;,</span><br><span class="line">	url: &#39;http:&#x2F;&#x2F;localhost:4000&#x2F;first&#39;,</span><br><span class="line">	success: function (data) &#123;</span><br><span class="line">		console.log(data);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><h2 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;tpl&quot;&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;span&gt;&#123;&#123;name&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">	&lt;span&gt;&#123;&#123;age&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;scipt&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;将特定模板与特定数据进行拼接</span><br><span class="line">const html &#x3D; template(&#39;tpl&#39;, &#123;</span><br><span class="line">	name: &#39;张三&#39;,</span><br><span class="line">	age: 20</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h3 id="原文输出"><a href="#原文输出" class="headerlink" title="原文输出"></a>原文输出</h3><p>如果数据中携带HTML标签，默认情况下，模板引擎不会解析标签，会将其转义后原文输出。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;&#123;&#123;@ value&#125;&#125;&lt;&#x2F;h2&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;if 条件&#125;&#125;...&#123;&#123;&#x2F;if&#125;&#125;</span><br><span class="line">&#123;&#123;if v1&#125;&#125;...&#123;&#123;else if v2&#125;&#125;...&#123;&#123;&#x2F;if&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;if 条件&#125;&#125;</span><br><span class="line">	&lt;div&gt;条件成立 显示我&lt;&#x2F;div&gt;</span><br><span class="line">&#123;&#123;else&#125;&#125;</span><br><span class="line">	&lt;div&gt;条件不成立 显示我&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;if&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;each target&#125;&#125;</span><br><span class="line">	&#123;&#123;$index&#125;&#125; &#123;&#123;$value&#125;&#125;</span><br><span class="line">&#123;&#123;&#x2F;each&#125;&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="导入模块变量"><a href="#导入模块变量" class="headerlink" title="导入模块变量"></a>导入模块变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;$imports.dataFormat(time)&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">template.defaults.imports.变量名 &#x3D; 变量值;</span><br><span class="line">$imports.变量名称</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function dateFormat (未格式化的原始时间) &#123;</span><br><span class="line">	return &#39;已经格式化好的当前时间&#39;</span><br><span class="line">&#125;</span><br><span class="line">template.defaults.imports.dateFormat &#x3D; dateFormat;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;tp;&quot;&gt;&lt;div&gt;当前时间是: &#123;&#123;$imports.dateFormat(date)&#125;&#125;&lt;&#x2F;div&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">        window.onload &#x3D; function () &#123;    </span><br><span class="line">            &#x2F;&#x2F;将方法导入到模板中</span><br><span class="line">            template.defaults.imports.dateFormat &#x3D; dateFormat;</span><br><span class="line">            &#x2F;&#x2F;这是告诉模板引擎将模板id为tpl的模板和data数据对象惊醒拼接</span><br><span class="line">            var html &#x3D; template(&#39;tpl&#39;, &#123;</span><br><span class="line">                data: new Date()</span><br><span class="line">            &#125;);</span><br><span class="line">            document.getElementById(&#39;container&#39;).innerHTML &#x3D; html;</span><br><span class="line">            &#x2F;&#x2F;特定格式</span><br><span class="line">            function dateFormat(date) &#123;</span><br><span class="line">                return date.getFullYear() + &#39;年&#39; + (date.getMoth() + 1) + &#39;月&#39; + date.getDate() + &#39;日&#39;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="FormData对象的使用"><a href="#FormData对象的使用" class="headerlink" title="FormData对象的使用"></a>FormData对象的使用</h1><h2 id="FormData对象的使用-1"><a href="#FormData对象的使用-1" class="headerlink" title="FormData对象的使用"></a>FormData对象的使用</h2><p>1.准备HTML对象的使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id&#x3D;&quot;form&quot;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;username&quot; &#x2F;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;password&quot; name&#x3D;&quot;password&quot;&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;button&quot;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2.将HTML表单转化为formdata对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var form &#x3D; document.getElementById(&#39;form&#39;);</span><br><span class="line">var formData &#x3D; new Formata(form);</span><br></pre></td></tr></table></figure>
-
-<p>3.提交表单对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send(formData);</span><br></pre></td></tr></table></figure>
-
-<h2 id="FormData-对象的实力方法"><a href="#FormData-对象的实力方法" class="headerlink" title="FormData 对象的实力方法"></a>FormData 对象的实力方法</h2><p>1.获取表单对象中属性的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formData.get(&#39;key&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>2.设置表单对象中属性的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formData.set(&#39;key&#39;, &#39;value&#39;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;存在表单值就覆盖原有值</span><br><span class="line">console.log(formData.set(&#39;username&#39;, &#39;itcast&#39;));</span><br><span class="line">&#x2F;&#x2F;不存在表单值就创建</span><br><span class="line">console.log(formData.set(&#39;age&#39;, 100));</span><br></pre></td></tr></table></figure>
-
-<p>3.删除表单对象中属性的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formData.delete(&#39;key&#39;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;删除用户输入的值</span><br><span class="line">formData.delete(&#39;password&#39;);</span><br></pre></td></tr></table></figure>
-
-<p>4.想表单对象中追加属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formData.append(&#39;key&#39;, &#39;value&#39;);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;创建空的表单对象</span><br><span class="line">var f &#x3D; new formData();</span><br><span class="line">f.append(&#39;sex&#39;, &#39;男&#39;);</span><br><span class="line">console.log(f.get(&#39;sex&#39;));</span><br></pre></td></tr></table></figure>
-
-<p>注意：set方法与append方法的区别是，在属性名已经存在的情况下，set会覆盖已有键名的值，append会保留两个值。只打印最后一个值</p>
-<h2 id="FormData二进制"><a href="#FormData二进制" class="headerlink" title="FormData二进制"></a>FormData二进制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;file&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var file &#x3D; document.query.Selector(&#39;#file&#39;);</span><br><span class="line">&#x2F;&#x2F;当用户选择文件的时候</span><br><span class="line">file.onchange &#x3D; function () &#123;</span><br><span class="line">	&#x2F;&#x2F;创建空表单对象</span><br><span class="line">	var formData &#x3D; new FomrData();</span><br><span class="line">	&#x2F;&#x2F;将用户选择的二进制文件追加到表单对象中</span><br><span class="line">	formData.append(&#39;attrName&#39;, this.files[0]);</span><br><span class="line">	&#x2F;&#x2F;配置ajax对象,请求方式必须为post</span><br><span class="line">	xhr.open(&#39;post&#39;, &#39;www.example.com&#39;);</span><br><span class="line">	xhr.send(fomrData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>FormData文件上传进度展示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;当用户选择文件的时候</span><br><span class="line">file.onchange &#x3D; function () &#123;</span><br><span class="line">	&#x2F;&#x2F;文件上传过程中持续触发onprogress事件</span><br><span class="line">	xhr.upload.onprogress &#x3D; function (ev) &#123;</span><br><span class="line">		&#x2F;&#x2F;当前上传文件大小&#x2F;文件总大小 再将结果转换为百分数</span><br><span class="line">		&#x2F;&#x2F;将结果赋值给进度条的宽度属性</span><br><span class="line">		bar.style.width &#x3D; (ev.loaded&#x2F; ev.total) * 100 + &#39;%&#39;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="FormData文件上传图片即时预览"><a href="#FormData文件上传图片即时预览" class="headerlink" title="FormData文件上传图片即时预览"></a>FormData文件上传图片即时预览</h2><p>在我们将图片上传到服务器端以后，服务器端通常都会将图片地址做为响应数据传递到客户端，客户端可以从响应数据获取图片地址，然后将图片再显示在页面中。</p>
-<h2 id="使用JSONP解决同源限制问题"><a href="#使用JSONP解决同源限制问题" class="headerlink" title="使用JSONP解决同源限制问题"></a>使用JSONP解决同源限制问题</h2><p>jsonp是json with padding 的缩写，它不属于Ajax请求，但它可以模拟Ajax请求。</p>
-<p>1.将不同源的服务器端请求地址写在script标签的src属性中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;www.example.com&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;http:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.3.1&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>2.服务器端响应数据必须是一个函数的调用，真正要发送给客户端的数据需要作为函数调用的参数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const data&#x3D; &#39;fn(&#123;naem:&quot;张三&quot;, age:&quot;20&quot;&#125;)&#39;;</span><br><span class="line">res.send(data);</span><br></pre></td></tr></table></figure>
-
-<p>3.在客户端全局作用域下定义函数fn</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function fn (data) &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>4.在fn函数内部对服务器端返回的数据进行处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function fn (data) &#123; console.log(data);&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="JSONP代码优化"><a href="#JSONP代码优化" class="headerlink" title="JSONP代码优化"></a>JSONP代码优化</h2><p>1.客户端需要将函数名称传递到服务端</p>
-<p>2.将script请求的发送变成动态请求</p>
-<p>3.封装jsonp函数，方便请求发送</p>
-<h2 id="CORS跨域资源共享"><a href="#CORS跨域资源共享" class="headerlink" title="CORS跨域资源共享"></a>CORS跨域资源共享</h2><p>CORS：全称Cross-orgin resource sharing，即跨域资源共享，它允许浏览器想跨域服务器端发送Ajax请求，克服了只能同源使用的限制。</p>
-<table>
-<thead>
-<tr>
-<th>浏览器端</th>
-<th>请求/请求头(origin)</th>
-<th>服务器端</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>响应/响应头(Access-Control-Access-Origin)</td>
-<td></td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">origin: http:&#x2F;&#x2F;localhost:4000</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: &#39;http:&#x2F;&#x2F;localhost:4000&#39;</span><br><span class="line">Access-control-Allow-Origin: &#39;*&#39;</span><br></pre></td></tr></table></figure>
-
-<h2 id="withCredentials属性"><a href="#withCredentials属性" class="headerlink" title="withCredentials属性"></a>withCredentials属性</h2><p>在使用Ajax技术发送跨域请求时，默认情况下不会在请求中携带cookie信息。</p>
-<p>withCredentials: 指定在涉及到跨域请求时，是否携带cookie信息，默认值为false</p>
-<p>Access-Control-Allow-Credentials：true允许客户端发送请求时携带cookie</p>
-<p>$.ajax()方法概述</p>
-<p>作用：发送Ajax请求。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &#39;get&#39;,</span><br><span class="line">	url: &#39;http:&#x2F;&#x2F;www.example.com&#39;,</span><br><span class="line">	data: &#123; name: &#39;zhangsan&#39;, age: &#39;20&#39;&#125;,</span><br><span class="line">	contentType: &#39;application&#x2F;x-www-form-urlencoded&#39;,</span><br><span class="line">	beforeSend: function () &#123;</span><br><span class="line">		return false</span><br><span class="line">	&#125;,</span><br><span class="line">	success: function (response) &#123;&#125;,</span><br><span class="line">	error: function () &#123;&#125;</span><br><span class="line">&#125;);</span><br><span class="line">&#123;</span><br><span class="line">	data: &#39;name&#x3D;zhangsan&amp;age&#x3D;20&#39;</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	contentType: &#39;application&#x2F;json&#39;</span><br><span class="line">&#125;</span><br><span class="line">JSON.stringify(&#123;name: &#39;zhangsan&#39;, age:&#39;20&#39;&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="serialize方法"><a href="#serialize方法" class="headerlink" title="serialize方法"></a>serialize方法</h3><p>作用：将表单中的数据自动拼接成字符串类型的参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var params &#x3D; $(&#39;#form&#39;).serialize();</span><br><span class="line">&#x2F;&#x2F;name&#x3D;zhangsan&amp;age&#x3D;30</span><br></pre></td></tr></table></figure>
-
-<h2 id="Jquery中Ajax全局事件"><a href="#Jquery中Ajax全局事件" class="headerlink" title="Jquery中Ajax全局事件"></a>Jquery中Ajax全局事件</h2><h3 id="全局时间"><a href="#全局时间" class="headerlink" title="全局时间"></a>全局时间</h3><p>当页面中有ajax请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.ajaxStart()	&#x2F;&#x2F;当请求开始发送时触发</span><br><span class="line">.ajaxComplete	&#x2F;&#x2F;当请求完成时触发</span><br></pre></td></tr></table></figure>
-
-<h3 id="第三方插件NProgress"><a href="#第三方插件NProgress" class="headerlink" title="第三方插件NProgress"></a>第三方插件NProgress</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&#39;stylesheet&#39; href&#x3D;&#39;nprogress.css&#39;&#x2F;&gt;</span><br><span class="line">&lt;script src&#x3D;&#39;nprogress.js&#39;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NProgress.start();	&#x2F;&#x2F;进度条开始运动</span><br><span class="line">NProgress.done();	&#x2F;&#x2F;进度条结束运动</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">	$(document).on(&#39;ajaxStart&#39;, function () &#123;</span><br><span class="line">		NProgress.start()</span><br><span class="line">	&#125;)</span><br><span class="line">	</span><br><span class="line">	$(document).on(&#39;ajaxComplete&#39;, function () &#123;</span><br><span class="line">		NProgress.done()</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="RESTful风格的API"><a href="#RESTful风格的API" class="headerlink" title="RESTful风格的API"></a>RESTful风格的API</h2><p>GET:    获取数据</p>
-<p>POST：    添加数据</p>
-<p>PUT：    更新数据</p>
-<p>DELETE：    删除数据</p>
-<h3 id="RESTful-API的实现"><a href="#RESTful-API的实现" class="headerlink" title="RESTful API的实现"></a>RESTful API的实现</h3><p>GET：    <a target="_blank" rel="noopener" href="http://www.example.com/user">http://www.example.com/user</a>    获取用户列表数据</p>
-<p>POST：    <a target="_blank" rel="noopener" href="http://www.example.com/user">http://www.example.com/user</a>    创建(添加)用户数据</p>
-<p>GET：    <a target="_blank" rel="noopener" href="http://www.example.com/user/1">http://www.example.com/user/1</a>    获取用户ID为1的用户信息</p>
-<p>PUT：    <a target="_blank" rel="noopener" href="http://www.example.com/user/1">http://www.example.com/user/1</a>    修改用户ID为1的用户信息</p>
-<p>DELETE：    <a target="_blank" rel="noopener" href="http://www.example.com/user/1">http://www.example.com/user/1</a>    删除用户ID为1的用户信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">例：</span><br><span class="line">&#x2F;&#x2F;获取用户列表信息</span><br><span class="line">app.get(&#39;&#x2F;users&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">	res.send(&#39;当前是获取用户列表信息的路由&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取某一个用户信息的路由</span><br><span class="line">app.get(&#39;&#x2F;users&#x2F;:id&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">	&#x2F;&#x2F;获取客户端传递过来的用户id</span><br><span class="line">	const id &#x3D; req.params.id;</span><br><span class="line">	res.send(&#39;当前我们是在获取id为$(id)用户信息&#39;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除某一个用户</span><br><span class="line">app.delete(&#39;&#x2F;users&#x2F;:id&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">	&#x2F;&#x2F;获取客户端传递过来的用户id</span><br><span class="line">	const id &#x3D; req.params.id;</span><br><span class="line">	res.send(&#39;当前我们是在删除id为$&#123;id&#125;用户信息&#39;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;修改某一个用户</span><br><span class="line">app.put(&#39;&#x2F;users&#x2F;:id&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">	&#x2F;&#x2F;获取客户端传递过来的用户id</span><br><span class="line">	const id &#x3D; req.params.id;</span><br><span class="line">	res.send(&#39;当前我们是在修改id为$&#123;id&#125;用户信息&#39;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">在$.ajax页面实现</span><br><span class="line">例:</span><br><span class="line">&#x2F;&#x2F;获取用户信息</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &#39;get&#39;,</span><br><span class="line">	url: &#39;&#x2F;users&#39;,</span><br><span class="line">	success: function (response) &#123;</span><br><span class="line">		console.log(response)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;获取id为1的用户信息</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &#39;get&#39;,</span><br><span class="line">	url: &#39;&#x2F;users&#x2F;1&#39;,</span><br><span class="line">	success: function (response) &#123;</span><br><span class="line">		console.log(response)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;删除id为1的用户信息</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &#39;delete&#39;,</span><br><span class="line">	url: &#39;&#x2F;users&#x2F;1&#39;,</span><br><span class="line">	success: function (response) &#123;</span><br><span class="line">		console.log(response)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><p>全称是extensible markup language, 代表可扩展标记语言，它的作用是传输和存储数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">客户端例：</span><br><span class="line">function () &#123;</span><br><span class="line">	var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	xhr.open(&#39;get&#39;, &#39;&#x2F;xml&#39;);</span><br><span class="line">	xhr.send();</span><br><span class="line">	xhr.onload &#x3D; function () &#123;</span><br><span class="line">		&#x2F;&#x2F;xhr.responseXML 获取服务器端返回的xml数据</span><br><span class="line">		var xmlDocument &#x3D; xhr.responseXML;</span><br><span class="line">		var title &#x3D; xmlDocument.getElementsByTagName(&#39;title&#39;)[0].innerHTML;</span><br><span class="line">		container.innerHTML &#x3D; title;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">服务器端例：</span><br><span class="line">app.get(&#39;&#x2F;xml&#39;, (req, res) &#x3D;&gt; &#123;</span><br><span class="line">	res.header(&#39;content-type&#39;, &#39;html&#x2F;xml&#39;);</span><br><span class="line">	res.send(&#39;&lt;message&gt;&lt;title&gt;消息标题&lt;&#x2F;title&gt;&lt;&#x2F;message&gt;&#39;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<p>charAt统计出现的字母的次数和出现最多的字母</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断一个字符串 &#x27;abcoefoxyozzopp&#x27; 中出现次数最多的字符，并统计其次数</span></span><br><span class="line"><span class="comment">// 核心算法：利用 charAt() 遍历这个字符串</span></span><br><span class="line"><span class="comment">// 把每个字符都储存给对象，如果对象没有该属性，就为1，如果存在了就 +1</span></span><br><span class="line"><span class="comment">// 遍历对象，得到最大值和该字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;abcoefoxyozzopp&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> chars = str.charAt(i) <span class="comment">//chars是字符串的每一个字符</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[chars]</span>)</span> &#123; <span class="comment">// o[chars] 得到的是属性值</span></span><br><span class="line">        o[chars]++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        o[chars] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(o);</span><br><span class="line"><span class="keyword">var</span> ch = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="comment">//2.遍历对象</span></span><br><span class="line"><span class="keyword">var</span> max = o;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> o) &#123;</span><br><span class="line">    <span class="comment">//k 得到的是属性名</span></span><br><span class="line">    <span class="comment">// o[k] 得到的是属性值</span></span><br><span class="line">    <span class="function"><span class="title">if</span>(<span class="params">o[k] &gt; max</span>)</span> &#123;</span><br><span class="line">        max = o[k]</span><br><span class="line">        ch = k;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -444,7 +223,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">手写</a>
         		</li>
       		
 		</ul>
@@ -500,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/ajax%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/11/19/%E5%86%85%E7%BD%AE%E6%96%B9%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -514,18 +293,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/05/07/Vue%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/03/09/html%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Vue笔记
+          html学习笔记
         
       </div>
     </a>
   
   
-    <a href="/2021/04/21/git%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git笔记</div>
+    <a href="/2020/11/19/%E5%86%92%E6%B3%A1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">冒泡</div>
       <i class="icon-circle-right"></i>
     </a>
   
