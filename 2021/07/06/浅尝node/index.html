@@ -16,7 +16,7 @@
 <meta property="og:description" content="NodeNode.js全局对象global在浏览器中全局对象是window,在Node中全局对象是global。 Node中全局对象下有以下方法，可以在任何地方使用，global可以省略 12345console.log()	在控制台中输出setTimeout()	设置超时定时器clearTimeout()	清除超时定时器setInterval		设置间歇定时器clearInterval	清楚间歇">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-06T14:28:14.000Z">
-<meta property="article:modified_time" content="2021-07-09T10:12:49.651Z">
+<meta property="article:modified_time" content="2021-07-10T14:44:30.787Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="node">
 <meta name="twitter:card" content="summary">
@@ -178,6 +178,8 @@
         <h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><h2 id="Node-js全局对象global"><a href="#Node-js全局对象global" class="headerlink" title="Node.js全局对象global"></a>Node.js全局对象global</h2><p>在浏览器中全局对象是window,在Node中全局对象是global。</p>
 <p>Node中全局对象下有以下方法，可以在任何地方使用，global可以省略</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log()	在控制台中输出</span><br><span class="line">setTimeout()	设置超时定时器</span><br><span class="line">clearTimeout()	清除超时定时器</span><br><span class="line">setInterval		设置间歇定时器</span><br><span class="line">clearInterval	清楚间歇定时器</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h3 id="Node-js中模块化开发规范"><a href="#Node-js中模块化开发规范" class="headerlink" title="Node.js中模块化开发规范"></a>Node.js中模块化开发规范</h3><p>Node.js规定一个Javascript文件就是一个模块，模块内部定义的变量和函数默认情况下在外部无法得到</p>
 <p>模块内部可以使用<strong>exports对象进行成员导出</strong>，使用<strong>require方法</strong>导入其他模块</p>
