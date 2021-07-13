@@ -16,7 +16,7 @@
 <meta property="og:description" content="手写脚手架创建项目">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-13T01:22:45.000Z">
-<meta property="article:modified_time" content="2021-07-13T01:26:53.254Z">
+<meta property="article:modified_time" content="2021-07-13T01:29:36.994Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="cli、脚手架">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
 <p>配置运行的环境</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; index.js文件下</span><br><span class="line">&#x2F;&#x2F; &#39;#!&#39; 这个称为shebang或hashbang，它的作用是当执行某个指令的时候找到这个文件，根据配置的环境执行这个文件。&#x2F;usr&#x2F;bin&#x2F;env node &#x2F;&#x2F;意思就是在当前这个环境中找到node，也可以手动配置绝对路径，但是系统不同又兼容性问题。</span><br><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env node </span><br></pre></td></tr></table></figure>
 
-<p>配置完成后需要使用<code>npm link</code>，npm link会将它会将真正的环境变量做一个链接。链接后它会在node中生成脚本与文件。</p>
+<p>配置完成后需要使用<code>npm link</code>，npm link会将它与真正的环境变量做一个链接。链接后它会在node中生成脚本与文件。</p>
 <h2 id="配置执行的命令"><a href="#配置执行的命令" class="headerlink" title="配置执行的命令"></a>配置执行的命令</h2><p>安装依赖<code>npm install commander</code></p>
 <p><code>commander</code>的官方文档: <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/commander">https://www.npmjs.com/package/commander</a></p>
 <h3 id="生成版本号"><a href="#生成版本号" class="headerlink" title="生成版本号"></a>生成版本号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; index.js文件下</span><br><span class="line">#!&#x2F;usr&#x2F;bin&#x2F;env node</span><br><span class="line">const program &#x3D; require(&#39;commander&#39;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 查看版本号</span><br><span class="line">program.version(require(&#39;.&#x2F;package.json&#39;).version)	&#x2F;&#x2F; 创建查看版本的指令，使用package.json中的version来查看版本。使用时执行why --version或-V即可查看版本号。</span><br><span class="line">&#x2F;&#x2F; program.version(require(&#39;.&#x2F;package.json&#39;).version, &#39;-v, --version&#39;)	&#x2F;&#x2F; 如果需要输入-v查看，在后面添加2个自定义参数即可。</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; ，必须使用program.parse(process.argv)来解析</span><br><span class="line">program.parse(process.argv)	</span><br></pre></td></tr></table></figure>
