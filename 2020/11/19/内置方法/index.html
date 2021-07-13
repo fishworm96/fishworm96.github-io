@@ -16,7 +16,7 @@
 <meta property="og:description" content="Math方法：max： 1234567891011var math &#x3D; &amp;#123;    max: function () &amp;#123;        var max &#x3D; arguments[0]        for (var i &#x3D; 1; i &lt; arguments.length; i++) &amp;#123;            if (arguments[">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-19T13:18:56.000Z">
-<meta property="article:modified_time" content="2021-06-22T07:49:30.897Z">
+<meta property="article:modified_time" content="2021-07-13T01:31:09.961Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="手写">
 <meta name="twitter:card" content="summary">
@@ -177,6 +177,8 @@
       
         <h1 id="Math方法："><a href="#Math方法：" class="headerlink" title="Math方法："></a>Math方法：</h1><p>max：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    max: function () &#123;</span><br><span class="line">        var max &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &gt; max) &#123;</span><br><span class="line">                max &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>min:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var math &#x3D; &#123;</span><br><span class="line">    min: function () &#123;</span><br><span class="line">        var min &#x3D; arguments[0]</span><br><span class="line">        for (var i &#x3D; 1; i &lt; arguments.length; i++) &#123;</span><br><span class="line">            if (arguments[i] &lt; min) &#123;</span><br><span class="line">                min &#x3D; arguments[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return min</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
