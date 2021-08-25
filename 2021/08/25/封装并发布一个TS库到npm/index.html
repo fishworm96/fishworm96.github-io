@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>封装并发布一个库到npm | 梦开始的地方</title>
+  <title>封装并发布一个TS库到npm | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="封装并发布一个库到npm">
-<meta property="og:url" content="http://example.com/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AA%E5%BA%93%E5%88%B0npm/index.html">
+  <meta name="description" content="封装并发布一个TS库到npm1.初始化1.初始化package.json创建文件夹，这里使用test-array-map。 使用npm init初始化一个package.json，如果想默认初始化可以使用npm init -y。这里自己配置。 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="封装并发布一个TS库到npm">
+<meta property="og:url" content="http://example.com/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AATS%E5%BA%93%E5%88%B0npm/index.html">
 <meta property="og:site_name" content="梦开始的地方">
+<meta property="og:description" content="封装并发布一个TS库到npm1.初始化1.初始化package.json创建文件夹，这里使用test-array-map。 使用npm init初始化一个package.json，如果想默认初始化可以使用npm init -y。这里自己配置。 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-25T06:27:16.000Z">
-<meta property="article:modified_time" content="2021-08-25T06:27:53.133Z">
+<meta property="article:modified_time" content="2021-08-25T08:46:25.430Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="typescript、npm">
 <meta name="twitter:card" content="summary">
@@ -153,19 +155,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-封装并发布一个库到npm" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-封装并发布一个TS库到npm" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      封装并发布一个库到npm
+      封装并发布一个TS库到npm
     </h1>
   
 
         
-        <a href="/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AA%E5%BA%93%E5%88%B0npm/" class="archive-article-date">
+        <a href="/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AATS%E5%BA%93%E5%88%B0npm/" class="archive-article-date">
   	<time datetime="2021-08-25T06:27:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-25</time>
 </a>
         
@@ -173,7 +175,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="封装并发布一个TS库到npm"><a href="#封装并发布一个TS库到npm" class="headerlink" title="封装并发布一个TS库到npm"></a>封装并发布一个TS库到npm</h1><h2 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h2><h3 id="1-初始化package-json"><a href="#1-初始化package-json" class="headerlink" title="1.初始化package.json"></a>1.初始化package.json</h3><p>创建文件夹，这里使用test-array-map。</p>
+<p>使用<code>npm init</code>初始化一个package.json，如果想默认初始化可以使用<code>npm init -y</code>。这里自己配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;&#x2F; 包的名字</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;, &#x2F;&#x2F; 版本</span><br><span class="line">  &quot;description&quot;: &quot;array map funtion use ts&quot;, &#x2F;&#x2F; 描述</span><br><span class="line">  &quot;main&quot;: &quot;.&#x2F;dist&#x2F;test-array-map.js&quot;, &#x2F;&#x2F; 内容的路径</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;, &#x2F;&#x2F; 配置的执行脚本</span><br><span class="line">  &quot;keywords&quot;: [</span><br><span class="line">    &quot;typescript&quot;</span><br><span class="line">  ], &#x2F;&#x2F; 关键字</span><br><span class="line">  &quot;author&quot;: &quot;zzz&quot;, &#x2F;&#x2F; 作者</span><br><span class="line">  &quot;license&quot;: &quot;MIT&quot; &#x2F;&#x2F; 开源协议</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-初始化typescript"><a href="#2-初始化typescript" class="headerlink" title="2.初始化typescript"></a>2.初始化typescript</h3><p>使用<code>tsc --init</code>初始化tsconfig.json。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; tsconfig.json</span><br><span class="line">&#x2F;&#x2F; 修改一下配置</span><br><span class="line">&#123;</span><br><span class="line">&quot;declaration&quot;: true &#x2F;&#x2F; 打包后是否生成声明文件，设置为true后不仅会生成一个.d.ts文件还会生成一个js文件。</span><br><span class="line">&quot;outDir&quot;: &quot;.&#x2F;dist&quot; &#x2F;&#x2F; 输出目录，编译后输出的目录放到dist文件夹下。</span><br><span class="line">&#125;,</span><br><span class="line">&#x2F;&#x2F; 打包后会排除掉一下文件夹或者文件。</span><br><span class="line">  &quot;exclude&quot;: [</span><br><span class="line">    &quot;.&#x2F;dist&quot;,</span><br><span class="line">    &quot;.&#x2F;example&quot;</span><br><span class="line">  ]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>因为要使用TS，这里就需要安装TS依赖。使用<code>npm install typescript -D</code>安装TS依赖。</p>
+<h2 id="2-创建库文件"><a href="#2-创建库文件" class="headerlink" title="2.创建库文件"></a>2.创建库文件</h2><h3 id="1-创建纯js中使用的库文件"><a href="#1-创建纯js中使用的库文件" class="headerlink" title="1.创建纯js中使用的库文件"></a>1.创建纯js中使用的库文件</h3><p>创建test-array-map.ts文件，模拟原生js的map方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; map方法有三个参数，第一个参数是当前遍历项。第二个参数是索引。第三个参数是遍历后返回的数组。</span><br><span class="line">&#x2F;&#x2F; 这里array模拟需要遍历的数组。回调函数里的三个参数就是map方法里的三个参数。</span><br><span class="line">&#x2F;&#x2F; 遍历的数组可以是任意类型的数组所以这里定义any类型，回调函数里第一项就是传入的每一项所以也是任意类和传入的数组类型相同所以也使用any。索引就是数值类型。第三个参数就是传入数组的引用也用any的数组。回调函数的结果返回就是any类型，arrayMap的返回值类型也是any类型的数组。</span><br><span class="line">const arrayMap &#x3D; (array: any[], callback: (item: any, index: number, arr: any[]) &#x3D;&gt; any): any[] &#x3D;&gt; &#123;</span><br><span class="line">	&#x2F;&#x2F; 初始索引值</span><br><span class="line">  let i &#x3D; -1</span><br><span class="line">  &#x2F;&#x2F; 数组长度</span><br><span class="line">  const len &#x3D; array.length</span><br><span class="line">  &#x2F;&#x2F; 空数组放结果</span><br><span class="line">  const resArray &#x3D; []</span><br><span class="line">  &#x2F;&#x2F; 遍历数组</span><br><span class="line">  while(++i &lt; len) &#123;</span><br><span class="line">  &#x2F;&#x2F; 执行完遍历返回的结果</span><br><span class="line">    resArray.push(callback(array[i], i, array))</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 返回结果数组</span><br><span class="line">  return resArray</span><br><span class="line">&#125;</span><br><span class="line">export &#x3D; arrayMap</span><br></pre></td></tr></table></figure>
+
+<p>在终端中使用<code>tsc</code>编译文件，就会在dist文件夹中生成编译后的文件。</p>
+<p>编译结束后测试一下，<code>cd dist</code>文件中使用<code>node</code>来执行文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const arrayMap &#x3D; require(&#39;.&#x2F;test-array-map&#39;)</span><br><span class="line">arrayMap([1, 2], (item) &#x3D;&gt; &#123;</span><br><span class="line">	return item + 1</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>现在在纯js的项目就可以直接使用了。</p>
+<h3 id="2-改良文件"><a href="#2-改良文件" class="headerlink" title="2.改良文件"></a>2.改良文件</h3><p>创建测试文件夹example，文件夹下创建test.ts文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; test.ts文件下</span><br><span class="line">import arrayMap &#x3D; require(&#39;..&#x2F;dist&#x2F;test-array-map&#39;)</span><br><span class="line">console.log(arrayMap([1, 2], (item) &#x3D;&gt; &#123;</span><br><span class="line">  return item + 2</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+<p>终端中使用<code>cd example</code>切换至example文件夹下，使用<code>tsc test.ts</code>编译文件。</p>
+<p>使用<code>node test.ts</code>执行文件。打印出来说明执行成功了。</p>
+<p>现在改良文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 现在传入的类型和回调函数第一个参数的类型是一样，索引这里定义泛型变量T。回调函数的第三个参数arr，是传入参数的引用，我们不希望它可以更改所以这里使用内置的只读属性并且元素类型为T。回调函数返回的类型应该和方法返回的类型一样，因为方法是由回调函数组成的数组，所以这里使用了U泛型变量。</span><br><span class="line">const arrayMap &#x3D; &lt;T, U&gt;(array: T[], callback: (item: T, index: number, arr: ReadonlyArray&lt;T&gt;) &#x3D;&gt; U): U[] &#x3D;&gt; &#123;</span><br><span class="line">  let i &#x3D; -1</span><br><span class="line">  const len &#x3D; array.length</span><br><span class="line">  const resArray &#x3D; []</span><br><span class="line">  while(++i &lt; len) &#123;</span><br><span class="line">    resArray.push(callback(array[i], i, array))</span><br><span class="line">  &#125;</span><br><span class="line">  return resArray</span><br><span class="line">&#125;</span><br><span class="line">export &#x3D; arrayMap</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import arrayMap &#x3D; require(&#39;..&#x2F;dist&#x2F;test-array-map&#39;)</span><br><span class="line">arrayMap([1, 2], (item) &#x3D;&gt; &#123;</span><br><span class="line">  return item + 2</span><br><span class="line">&#125;).forEach((item) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(item.length)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>按理说数值类型是不会拥有length属性，所以改良以后再重新执行一下。</p>
+<p>切换回上级目录<code>cd ..</code>，重新编译一下<code>tsc</code>，先再它就会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import arrayMap &#x3D; require(&#39;..&#x2F;dist&#x2F;test-array-map&#39;)</span><br><span class="line">arrayMap([1, 2], (item) &#x3D;&gt; &#123;</span><br><span class="line">  return item + 2</span><br><span class="line">&#125;).forEach((item) &#x3D;&gt; &#123;</span><br><span class="line">  item.toFixed()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-上传至npm"><a href="#3-上传至npm" class="headerlink" title="3.上传至npm"></a>3.上传至npm</h3><h4 id="1-上传"><a href="#1-上传" class="headerlink" title="1.上传"></a>1.上传</h4><p>在test-array-map路径下创建.npmignore文件用来过滤不想上传的文件或文件夹。现在只想上传dist文件夹，node_modules是默认不上传的，使用<code>/example/</code>这里就过滤掉example文件夹。</p>
+<p>执行<code>npm publish</code>上传包，输入自己的npm账号、密码、与邮箱。</p>
+<h4 id="2-测试npm包"><a href="#2-测试npm包" class="headerlink" title="2.测试npm包"></a>2.测试npm包</h4><p>在package.json中的name与包名字不能一样。所以修改一下。使用<code>npm install (包名字)</code>，就可以大功告成了。</p>
+<h4 id="3-更新包"><a href="#3-更新包" class="headerlink" title="3.更新包"></a>3.更新包</h4><p>在package.json中修改version就可以修改包的版本了，再使用<code>npm publish</code>更新包。使用<code>npm install (包名字)@latest</code>可以下载最新的包的版本。</p>
+
       
 
       
@@ -242,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AA%E5%BA%93%E5%88%B0npm/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AATS%E5%BA%93%E5%88%B0npm/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,7 +321,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AATS%E5%BA%93%E5%88%B0npm"><span class="toc-number">1.</span> <span class="toc-text">封装并发布一个TS库到npm</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.1.</span> <span class="toc-text">1.初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96package-json"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.初始化package.json</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96typescript"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.初始化typescript</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">2.创建库文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E7%BA%AFjs%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E5%BA%93%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.创建纯js中使用的库文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%94%B9%E8%89%AF%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.改良文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8A%E4%BC%A0%E8%87%B3npm"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.上传至npm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%8A%E4%BC%A0"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">1.上传</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B5%8B%E8%AF%95npm%E5%8C%85"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">2.测试npm包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%9B%B4%E6%96%B0%E5%8C%85"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">3.更新包</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
