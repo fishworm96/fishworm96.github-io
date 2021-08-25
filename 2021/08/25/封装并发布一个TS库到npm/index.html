@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>封装并发布一个TS库到npm | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="封装并发布一个TS库到npm1.初始化1.初始化package.json创建文件夹，这里使用test-array-map。 使用npm init初始化一个package.json，如果想默认初始化可以使用npm init -y。这里自己配置。 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;">
+  <meta name="description" content="封装并发布一个TS库到npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="封装并发布一个TS库到npm">
 <meta property="og:url" content="http://example.com/2021/08/25/%E5%B0%81%E8%A3%85%E5%B9%B6%E5%8F%91%E5%B8%83%E4%B8%80%E4%B8%AATS%E5%BA%93%E5%88%B0npm/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="封装并发布一个TS库到npm1.初始化1.初始化package.json创建文件夹，这里使用test-array-map。 使用npm init初始化一个package.json，如果想默认初始化可以使用npm init -y。这里自己配置。 1234567891011121314&amp;#123;  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;">
+<meta property="og:description" content="封装并发布一个TS库到npm">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-25T06:27:16.000Z">
-<meta property="article:modified_time" content="2021-08-25T08:46:25.430Z">
+<meta property="article:modified_time" content="2021-08-25T08:47:25.501Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="typescript、npm">
 <meta name="twitter:card" content="summary">
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="封装并发布一个TS库到npm"><a href="#封装并发布一个TS库到npm" class="headerlink" title="封装并发布一个TS库到npm"></a>封装并发布一个TS库到npm</h1><h2 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h2><h3 id="1-初始化package-json"><a href="#1-初始化package-json" class="headerlink" title="1.初始化package.json"></a>1.初始化package.json</h3><p>创建文件夹，这里使用test-array-map。</p>
+        <h1 id="封装并发布一个TS库到npm"><a href="#封装并发布一个TS库到npm" class="headerlink" title="封装并发布一个TS库到npm"></a>封装并发布一个TS库到npm</h1><a id="more"></a>
+
+<h2 id="1-初始化"><a href="#1-初始化" class="headerlink" title="1.初始化"></a>1.初始化</h2><h3 id="1-初始化package-json"><a href="#1-初始化package-json" class="headerlink" title="1.初始化package.json"></a>1.初始化package.json</h3><p>创建文件夹，这里使用test-array-map。</p>
 <p>使用<code>npm init</code>初始化一个package.json，如果想默认初始化可以使用<code>npm init -y</code>。这里自己配置。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;zzz-array-map&quot;, &#x2F;&#x2F; 包的名字</span><br><span class="line">  &quot;version&quot;: &quot;1.0.0&quot;, &#x2F;&#x2F; 版本</span><br><span class="line">  &quot;description&quot;: &quot;array map funtion use ts&quot;, &#x2F;&#x2F; 描述</span><br><span class="line">  &quot;main&quot;: &quot;.&#x2F;dist&#x2F;test-array-map.js&quot;, &#x2F;&#x2F; 内容的路径</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span><br><span class="line">  &#125;, &#x2F;&#x2F; 配置的执行脚本</span><br><span class="line">  &quot;keywords&quot;: [</span><br><span class="line">    &quot;typescript&quot;</span><br><span class="line">  ], &#x2F;&#x2F; 关键字</span><br><span class="line">  &quot;author&quot;: &quot;zzz&quot;, &#x2F;&#x2F; 作者</span><br><span class="line">  &quot;license&quot;: &quot;MIT&quot; &#x2F;&#x2F; 开源协议</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
