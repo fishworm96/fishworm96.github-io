@@ -152,6 +152,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-为第三方库写声明文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/25/%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%86%99%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/">为第三方库写声明文件</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/25/%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%86%99%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2021-08-25T08:53:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="为第三方库添加声明文件"><a href="#为第三方库添加声明文件" class="headerlink" title="为第三方库添加声明文件"></a>为第三方库添加声明文件</h1><h2 id="1、安装第三方库"><a href="#1、安装第三方库" class="headerlink" title="1、安装第三方库"></a>1、安装第三方库</h2><p>这里使用一个简单的第三方库用来做演示，使用<code>npm install indexof</code>，安装第三方库。</p>
+<p>indexof这个库的源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var indexOf &#x3D; [].indexOf;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; function(arr, obj)&#123;</span><br><span class="line">&#x2F;&#x2F; 判断是否有indexof方法，如果有就直接使用indexof属性。</span><br><span class="line">  if (indexOf) return arr.indexOf(obj);</span><br><span class="line">  &#x2F;&#x2F; 没有就使用自己定义的indexof方法</span><br><span class="line">  for (var i &#x3D; 0; i &lt; arr.length; ++i) &#123;</span><br><span class="line">    if (arr[i] &#x3D;&#x3D;&#x3D; obj) return i;</span><br><span class="line">  &#125;</span><br><span class="line">  return -1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、检查是否有声明文件"><a href="#2、检查是否有声明文件" class="headerlink" title="2、检查是否有声明文件"></a>2、检查是否有声明文件</h2><p>使用第三方库时可以使用<code>npm install @types/indexof(库的名字) -D</code>来检查是否有人为它写过声明文件。它会下载到node_modules下的@types文件夹下。</p>
+<p>如果没有就需要我们自己帮它写一份声明文件</p>
+<h2 id="3、编写声明文件"><a href="#3、编写声明文件" class="headerlink" title="3、编写声明文件"></a>3、编写声明文件</h2><p>按照习惯在src文件夹下创建typings文件夹，在创建indexof文件夹，在文件夹下创建indexof.d.ts文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 使用关键字declare module声明文件 indexof为自己定义的名字</span><br><span class="line">declare module indexof &#123;</span><br><span class="line">	&#x2F;&#x2F; 导出函数，indexof方法传入一个任意类型的数组，第二个参数时可选的任意类型。返回值没有找到就时-1，有就时那个值的位置所以时数值类型。</span><br><span class="line">  export function indexof(array: Array&lt;any&gt;, value?: any): number</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建一个文件测试一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; ts的导入方式</span><br><span class="line">import indexof &#x3D; require(&#39;indexof&#39;)</span><br><span class="line">console.log(indexof([1, 2], 2))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; js的导入方式</span><br><span class="line">import indexof from &#39;indexof&#39;</span><br><span class="line">console.log(indexof([1, 2], 2))</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">TS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/25/%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%86%99%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-封装并发布一个TS库到npm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -853,85 +940,6 @@
 
 
   
-    <article id="post-ajax笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/">ajax笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-21T13:46:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Ajax基础"><a href="#Ajax基础" class="headerlink" title="Ajax基础"></a>Ajax基础</h1><h2 id="Ajax的应用场景"><a href="#Ajax的应用场景" class="headerlink" title="Ajax的应用场景"></a>Ajax的应用场景</h2><p>1.页面上拉加载更多数据</p>
-<p>2.列表数据无刷新分页</p>
-<p>3.表单项离开焦点数据证</p>
-<p>4.搜索框提示文字下拉列表</p>
-        
-          <a class="article-more-a" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1086,6 +1094,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">typescript、npm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">TS</a>
               </li>
             
             <div class="clearfix"></div>
