@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>为第三方库写声明文件 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为第三方库添加声明文件1、安装第三方库这里使用一个简单的第三方库用来做演示，使用npm install indexof，安装第三方库。 indexof这个库的源码 1234567891011var indexOf &#x3D; [].indexOf;module.exports &#x3D; function(arr, obj)&amp;#123;&#x2F;&#x2F; 判断是否有indexof方法，如">
+  <meta name="description" content="为第三方库添加声明文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为第三方库写声明文件">
 <meta property="og:url" content="http://example.com/2021/08/25/%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%86%99%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="为第三方库添加声明文件1、安装第三方库这里使用一个简单的第三方库用来做演示，使用npm install indexof，安装第三方库。 indexof这个库的源码 1234567891011var indexOf &#x3D; [].indexOf;module.exports &#x3D; function(arr, obj)&amp;#123;&#x2F;&#x2F; 判断是否有indexof方法，如">
+<meta property="og:description" content="为第三方库添加声明文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-25T08:53:02.000Z">
-<meta property="article:modified_time" content="2021-08-26T06:56:00.356Z">
+<meta property="article:modified_time" content="2021-08-26T06:57:50.281Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="TS">
 <meta name="twitter:card" content="summary">
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="为第三方库添加声明文件"><a href="#为第三方库添加声明文件" class="headerlink" title="为第三方库添加声明文件"></a>为第三方库添加声明文件</h1><h2 id="1、安装第三方库"><a href="#1、安装第三方库" class="headerlink" title="1、安装第三方库"></a>1、安装第三方库</h2><p>这里使用一个简单的第三方库用来做演示，使用<code>npm install indexof</code>，安装第三方库。</p>
+        <h1 id="为第三方库添加声明文件"><a href="#为第三方库添加声明文件" class="headerlink" title="为第三方库添加声明文件"></a>为第三方库添加声明文件</h1><a id="more"></a>
+
+<h2 id="1、安装第三方库"><a href="#1、安装第三方库" class="headerlink" title="1、安装第三方库"></a>1、安装第三方库</h2><p>这里使用一个简单的第三方库用来做演示，使用<code>npm install indexof</code>，安装第三方库。</p>
 <p>indexof这个库的源码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var indexOf &#x3D; [].indexOf;</span><br><span class="line"></span><br><span class="line">module.exports &#x3D; function(arr, obj)&#123;</span><br><span class="line">&#x2F;&#x2F; 判断是否有indexof方法，如果有就直接使用indexof属性。</span><br><span class="line">  if (indexOf) return arr.indexOf(obj);</span><br><span class="line">  &#x2F;&#x2F; 没有就使用自己定义的indexof方法</span><br><span class="line">  for (var i &#x3D; 0; i &lt; arr.length; ++i) &#123;</span><br><span class="line">    if (arr[i] &#x3D;&#x3D;&#x3D; obj) return i;</span><br><span class="line">  &#125;</span><br><span class="line">  return -1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
