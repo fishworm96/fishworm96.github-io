@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: JavaScript | 梦开始的地方</title>
+  <title>数组去重 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="梦开始的地方">
-<meta property="og:url" content="http://example.com/tags/JavaScript/index.html">
+  <meta name="description" content="多种姿势实现数组去重数组去重是项目中比较常用的方法，在面试中也是面试官考验前端基本功技术的常考题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组去重">
+<meta property="og:url" content="http://example.com/2021/11/06/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/index.html">
 <meta property="og:site_name" content="梦开始的地方">
+<meta property="og:description" content="多种姿势实现数组去重数组去重是项目中比较常用的方法，在面试中也是面试官考验前端基本功技术的常考题。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-06T03:23:11.000Z">
+<meta property="article:modified_time" content="2022-01-19T13:14:02.771Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JavaScripty">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="梦开始的地方" type="application/atom+xml">
@@ -150,71 +155,201 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数组去重" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/21/js%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-21T12:38:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/21/js%E7%AC%94%E8%AE%B0/">js笔记</a>
+    <h1 class="article-title" itemprop="name">
+      数组去重
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/11/06/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" class="archive-article-date">
+  	<time datetime="2021-11-06T03:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="多种姿势实现数组去重"><a href="#多种姿势实现数组去重" class="headerlink" title="多种姿势实现数组去重"></a>多种姿势实现数组去重</h1><p>数组去重是项目中比较常用的方法，在面试中也是面试官考验前端基本功技术的常考题。</p>
+<a id="more"></a>
+
+<h2 id="一、利用对象的key唯一值"><a href="#一、利用对象的key唯一值" class="headerlink" title="一、利用对象的key唯一值"></a>一、利用对象的key唯一值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let obj &#x3D; &#123;&#125;</span><br><span class="line">for (let i &#x3D; 0, len &#x3D; arr.length; i &lt; len; i++) &#123;</span><br><span class="line">	let item &#x3D; arr[i]</span><br><span class="line">	if (obj[item] !&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">	arr.splice(i, 1)</span><br><span class="line">	i-- &#x2F;&#x2F; 解决删除元素后，数组塌陷问题</span><br><span class="line">	continue</span><br><span class="line">&#125;</span><br><span class="line">	obj[item] &#x3D; item</span><br><span class="line">&#125;</span><br><span class="line">console.log(arr)	&#x2F;&#x2F; [1, 2, null, undefined, &#39;1&#39;, &#39;2&#39;]</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="一、set数据结构"><a href="#一、set数据结构" class="headerlink" title="一、set数据结构"></a>一、set数据结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; new Set(arr)</span><br><span class="line"></span><br><span class="line">let newArr2 &#x3D; Array.from(new Set(arr))</span><br><span class="line">&#x2F;&#x2F; 简化</span><br><span class="line">let newArr3 &#x3D; [...new Set(arr)]</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; Set(6) &#123;1, 2, null, undefined, &#39;1&#39;, &#39;2&#39;&#125; 返回set结构的对象</span><br><span class="line">console.log(newArr2) &#x2F;&#x2F; [1, 2, null, undefined, &#39;1&#39;, &#39;2&#39;]	利用数组from方法返回一个新数组</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、new-Map"><a href="#二、new-Map" class="headerlink" title="二、new Map"></a>二、new Map</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let map &#x3D; new Map()</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line"></span><br><span class="line">for (let i &#x3D; 0, len &#x3D; arr.length; i &lt; len; i++) &#123;</span><br><span class="line">	if (!map.has(arr[i])) &#123;</span><br><span class="line">		map.set(arr[i], true)</span><br><span class="line">		newArr.push(arr[i])</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(newArr)	&#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、Array-prototype-IndexOf去重"><a href="#三、Array-prototype-IndexOf去重" class="headerlink" title="三、Array.prototype.IndexOf去重"></a>三、Array.prototype.IndexOf去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line">for (let i &#x3D; 0, len &#x3D; arr.length; i &lt; len; i++) &#123;</span><br><span class="line">	if (newArr.indexOf(arr[i]) &#x3D;&#x3D;&#x3D; -1) newArr.push(arr[i])</span><br><span class="line">&#125;</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [1, 2, null, undefined, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;等同于 forEach 写法</span><br><span class="line">arr.forEach( item &#x3D;&gt; newArr.indexOf(item) &#x3D;&#x3D;&#x3D; -1 ? newArr.push(item) : &#39;&#39;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、Array-prototype-filter-Array-prototype-indexOf"><a href="#四、Array-prototype-filter-Array-prototype-indexOf" class="headerlink" title="四、Array.prototype.filter + Array.prototype.indexOf"></a>四、Array.prototype.filter + Array.prototype.indexOf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; arr.filter((item, index) &#x3D;&gt; arr.indexOf(item) &#x3D;&#x3D;&#x3D; index)</span><br><span class="line">console.log(newArr)</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、Array-prototype-filter-Object-prototype-hasOwnProperty"><a href="#五、Array-prototype-filter-Object-prototype-hasOwnProperty" class="headerlink" title="五、Array.prototype.filter + Object.prototype.hasOwnProperty"></a>五、Array.prototype.filter + Object.prototype.hasOwnProperty</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let obj &#x3D; &#123;&#125;</span><br><span class="line">arr.filter(item &#x3D;&gt; </span><br><span class="line">	obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] &#x3D; true))</span><br><span class="line">console.log(obj)</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、Array-prototype-includes"><a href="#六、Array-prototype-includes" class="headerlink" title="六、Array.prototype.includes"></a>六、Array.prototype.includes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line">for (let i &#x3D; 0, len &#x3D; arr.length; i &lt; len; i++) &#123;</span><br><span class="line">	if (!newArr.includes(arr[i])) newArr.push(arr[i])</span><br><span class="line">&#125;</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br><span class="line">&#x2F;&#x2F; 等同forEch写法</span><br><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line">arr.forEach(item &#x3D;&gt; !newArr.includes(item) ? newArr.push(item) : &#39;&#39;)</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、Array-prototype-includes-Array-prototype-reduce"><a href="#七、Array-prototype-includes-Array-prototype-reduce" class="headerlink" title="七、Array.prototype.includes + Array.prototype.reduce"></a>七、Array.prototype.includes + Array.prototype.reduce</h2><p><code>reduce()</code>方法对数组中的每个元素执行一个由您提供的reducer函数（升序执行），讲其结果汇总为单个返回值。</p>
+<p><strong>reducer</strong>函数接收4个参数：</p>
+<p>1.Accumulator (acc)(累计器)</p>
+<p>2.Current Value (cur)(当前值)</p>
+<p>3.Current Index (idx)(当前索引)</p>
+<p>4.Source Array (src)(源数组)</p>
+<p><strong>语法</strong>：<br><code>arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])</code></p>
+<p><strong>callback</strong></p>
+<p>执行数组中每个值 (如果没有提供 <code>initialValue则第一个值除外</code>)的函数，包含四个参数：</p>
+<p><strong><code>accumulator</code></strong></p>
+<ul>
+<li><p><code>currentValue</code></p>
+<p>数组中正在处理的元素。</p>
+</li>
+<li><p><code>index</code> 可选</p>
+<p>数组中正在处理的当前元素的索引。 如果提供了<code>initialValue</code>，则起始索引号为0，否则从索引1起始。</p>
+</li>
+<li><p><code>array</code>可选</p>
+<p>调用<code>reduce()</code>的数组</p>
+</li>
+</ul>
+<p><code>initialValue</code>可选</p>
+<p>作为第一次调用 <code>callback</code>函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; arr.reduce((accu, cur) &#x3D;&gt; &#123;</span><br><span class="line">	return accu.includes(cur) ? accu : accu.concat(cur)		&#x2F;&#x2F; 1.拼接方法</span><br><span class="line">	&#x2F;&#x2F; return accu.includes(cur) ? accu : [...accu, cur]	&#x2F;&#x2F; 2.扩展运算</span><br><span class="line">&#125;, [])</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScripty</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JS笔记//" class="article-tag-list-link color5">JS笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/11/06/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/10/23/%E7%90%86%E8%A7%A3%E8%B5%8B%E5%80%BC%E3%80%81%E6%B5%85%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B7%B1%E6%8B%B7%E8%B4%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">理解赋值、浅拷贝与深拷贝</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E7%A7%8D%E5%A7%BF%E5%8A%BF%E5%AE%9E%E7%8E%B0%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D"><span class="toc-number">1.</span> <span class="toc-text">多种姿势实现数组去重</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%88%A9%E7%94%A8%E5%AF%B9%E8%B1%A1%E7%9A%84key%E5%94%AF%E4%B8%80%E5%80%BC"><span class="toc-number">1.1.</span> <span class="toc-text">一、利用对象的key唯一值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81set%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">一、set数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81new-Map"><span class="toc-number">1.3.</span> <span class="toc-text">二、new Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Array-prototype-IndexOf%E5%8E%BB%E9%87%8D"><span class="toc-number">1.4.</span> <span class="toc-text">三、Array.prototype.IndexOf去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Array-prototype-filter-Array-prototype-indexOf"><span class="toc-number">1.5.</span> <span class="toc-text">四、Array.prototype.filter + Array.prototype.indexOf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Array-prototype-filter-Object-prototype-hasOwnProperty"><span class="toc-number">1.6.</span> <span class="toc-text">五、Array.prototype.filter + Object.prototype.hasOwnProperty</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Array-prototype-includes"><span class="toc-number">1.7.</span> <span class="toc-text">六、Array.prototype.includes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81Array-prototype-includes-Array-prototype-reduce"><span class="toc-number">1.8.</span> <span class="toc-text">七、Array.prototype.includes + Array.prototype.reduce</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -237,9 +372,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
