@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>递归 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="递归(recursion)什么是递归？ 用数学的方式来解释就是阶乘 123N! &#x3D; N * (N - 1) * (n - 2)..... * 13! &#x3D; 3 * 2 * 14! &#x3D; 4 * 3 * 2 * 1  用JavaScript来演示一遍 12345678910111213function f (n) &amp;#123;	if (n &#x3D;&#x3D;&amp;#x3D">
+  <meta name="description" content="递归(recursion)什么是递归？ 用数学的方式来解释就是阶乘 123N! &#x3D; N * (N - 1) * (n - 2)..... * 13! &#x3D; 3 * 2 * 14! &#x3D; 4 * 3 * 2 * 1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="递归">
 <meta property="og:url" content="http://example.com/2022/02/26/%E9%80%92%E5%BD%92/index.html">
 <meta property="og:site_name" content="梦开始的地方">
-<meta property="og:description" content="递归(recursion)什么是递归？ 用数学的方式来解释就是阶乘 123N! &#x3D; N * (N - 1) * (n - 2)..... * 13! &#x3D; 3 * 2 * 14! &#x3D; 4 * 3 * 2 * 1  用JavaScript来演示一遍 12345678910111213function f (n) &amp;#123;	if (n &#x3D;&#x3D;&amp;#x3D">
+<meta property="og:description" content="递归(recursion)什么是递归？ 用数学的方式来解释就是阶乘 123N! &#x3D; N * (N - 1) * (n - 2)..... * 13! &#x3D; 3 * 2 * 14! &#x3D; 4 * 3 * 2 * 1">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-26T13:32:10.000Z">
-<meta property="article:modified_time" content="2022-02-26T13:40:40.986Z">
+<meta property="article:modified_time" content="2022-02-26T13:42:17.148Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -178,6 +178,8 @@
         <h1 id="递归-recursion"><a href="#递归-recursion" class="headerlink" title="递归(recursion)"></a>递归(recursion)</h1><p>什么是递归？</p>
 <p>用数学的方式来解释就是阶乘</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">N! &#x3D; N * (N - 1) * (n - 2)..... * 1</span><br><span class="line">3! &#x3D; 3 * 2 * 1</span><br><span class="line">4! &#x3D; 4 * 3 * 2 * 1</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <p>用JavaScript来演示一遍</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function f (n) &#123;</span><br><span class="line">	if (n &#x3D;&#x3D;&#x3D; 1) &#123;</span><br><span class="line">		return 1</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		return n * recursion(n - 1)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(3) &#x3D; 6</span><br><span class="line">	3 * f (2)</span><br><span class="line">		2 * f(1)</span><br><span class="line">			1</span><br><span class="line">3 * 2 * 1</span><br></pre></td></tr></table></figure>
