@@ -16,7 +16,7 @@
 <meta property="og:description" content="多种姿势实现数组去重数组去重是项目中比较常用的方法，在面试中也是面试官考验前端基本功技术的常考题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-06T03:23:11.000Z">
-<meta property="article:modified_time" content="2022-01-19T13:14:02.771Z">
+<meta property="article:modified_time" content="2022-03-04T14:02:09.221Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JavaScripty">
 <meta name="twitter:card" content="summary">
@@ -194,30 +194,7 @@
 
 <h2 id="六、Array-prototype-includes"><a href="#六、Array-prototype-includes" class="headerlink" title="六、Array.prototype.includes"></a>六、Array.prototype.includes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line">for (let i &#x3D; 0, len &#x3D; arr.length; i &lt; len; i++) &#123;</span><br><span class="line">	if (!newArr.includes(arr[i])) newArr.push(arr[i])</span><br><span class="line">&#125;</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br><span class="line">&#x2F;&#x2F; 等同forEch写法</span><br><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; []</span><br><span class="line">arr.forEach(item &#x3D;&gt; !newArr.includes(item) ? newArr.push(item) : &#39;&#39;)</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
 
-<h2 id="七、Array-prototype-includes-Array-prototype-reduce"><a href="#七、Array-prototype-includes-Array-prototype-reduce" class="headerlink" title="七、Array.prototype.includes + Array.prototype.reduce"></a>七、Array.prototype.includes + Array.prototype.reduce</h2><p><code>reduce()</code>方法对数组中的每个元素执行一个由您提供的reducer函数（升序执行），讲其结果汇总为单个返回值。</p>
-<p><strong>reducer</strong>函数接收4个参数：</p>
-<p>1.Accumulator (acc)(累计器)</p>
-<p>2.Current Value (cur)(当前值)</p>
-<p>3.Current Index (idx)(当前索引)</p>
-<p>4.Source Array (src)(源数组)</p>
-<p><strong>语法</strong>：<br><code>arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])</code></p>
-<p><strong>callback</strong></p>
-<p>执行数组中每个值 (如果没有提供 <code>initialValue则第一个值除外</code>)的函数，包含四个参数：</p>
-<p><strong><code>accumulator</code></strong></p>
-<ul>
-<li><p><code>currentValue</code></p>
-<p>数组中正在处理的元素。</p>
-</li>
-<li><p><code>index</code> 可选</p>
-<p>数组中正在处理的当前元素的索引。 如果提供了<code>initialValue</code>，则起始索引号为0，否则从索引1起始。</p>
-</li>
-<li><p><code>array</code>可选</p>
-<p>调用<code>reduce()</code>的数组</p>
-</li>
-</ul>
-<p><code>initialValue</code>可选</p>
-<p>作为第一次调用 <code>callback</code>函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; arr.reduce((accu, cur) &#x3D;&gt; &#123;</span><br><span class="line">	return accu.includes(cur) ? accu : accu.concat(cur)		&#x2F;&#x2F; 1.拼接方法</span><br><span class="line">	&#x2F;&#x2F; return accu.includes(cur) ? accu : [...accu, cur]	&#x2F;&#x2F; 2.扩展运算</span><br><span class="line">&#125;, [])</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
+<h2 id="七、Array-prototype-includes-Array-prototype-reduce"><a href="#七、Array-prototype-includes-Array-prototype-reduce" class="headerlink" title="七、Array.prototype.includes + Array.prototype.reduce"></a>七、Array.prototype.includes + Array.prototype.reduce</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [1, 1, 2, null, null, undefined, undefined, &#39;1&#39;, &#39;1&#39;, &#39;2&#39;]</span><br><span class="line">let newArr &#x3D; arr.reduce((accu, cur) &#x3D;&gt; &#123;</span><br><span class="line">	return accu.includes(cur) ? accu : accu.concat(cur)		&#x2F;&#x2F; 1.拼接方法</span><br><span class="line">	&#x2F;&#x2F; return accu.includes(cur) ? accu : [...accu, cur]	&#x2F;&#x2F; 2.扩展运算</span><br><span class="line">&#125;, [])</span><br><span class="line">console.log(newArr) &#x2F;&#x2F; [ 1, 2, null, undefined, &#39;1&#39;, &#39;2&#39; ]</span><br></pre></td></tr></table></figure>
 
       
 
