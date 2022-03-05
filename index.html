@@ -152,6 +152,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-线性搜索到二分搜索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/05/%E7%BA%BF%E6%80%A7%E6%90%9C%E7%B4%A2%E5%88%B0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/">线性搜索到二分搜索</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/05/%E7%BA%BF%E6%80%A7%E6%90%9C%E7%B4%A2%E5%88%B0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/" class="archive-article-date">
+  	<time datetime="2022-03-05T08:28:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linear-Search-brute-fore"><a href="#Linear-Search-brute-fore" class="headerlink" title="Linear Search - brute fore"></a>Linear Search - brute fore</h1><h2 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function sqvt(n) &#123;</span><br><span class="line">  for(let i &#x3D; 0; i &lt; n; i++) &#123;</span><br><span class="line">    if (i * i &#x3D;&#x3D; n) return i</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sqvt(25))</span><br></pre></td></tr></table></figure>
+
+<p>这个函数的时间复杂度使O(n)</p>
+<p>现在通过二分搜索的方法提升这个函数的运行速度</p>
+<h2 id="二分搜索"><a href="#二分搜索" class="headerlink" title="二分搜索"></a>二分搜索</h2><p>现在要找到25这个数,我们从它的中间开始查找,如果中间数小于25那就往右边查找,如果中间数大于25就往左边查找.</p>
+<p>比如<code>0____12____25</code>就去掉左边0-12的区间,再次从<code>12____18____25</code>中间数这个范围开始查找.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function sqvt(n) &#123;</span><br><span class="line">  let low &#x3D; 0</span><br><span class="line">  let high &#x3D; n</span><br><span class="line">  while(low &lt;&#x3D; high) &#123;</span><br><span class="line">    mid &#x3D; Math.floor((low + high) &#x2F; 2)</span><br><span class="line">  if (mid * mid &gt;&#x3D; n) return mid</span><br><span class="line">  if (mid * mid &gt; n) &#123;</span><br><span class="line">    high &#x3D; mid - 1</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    low &#x3D; mid + 1</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sqvt(25))</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/05/%E7%BA%BF%E6%80%A7%E6%90%9C%E7%B4%A2%E5%88%B0%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MySQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -813,92 +894,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/07/04/TypeScript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mock文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/">Mock文档</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2021-06-22T01:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Mock简明文档"><a href="#Mock简明文档" class="headerlink" title="Mock简明文档"></a>Mock简明文档</h1><h2 id="Mock-mock"><a href="#Mock-mock" class="headerlink" title="Mock.mock()"></a>Mock.mock()</h2><ul>
-<li>Mock.mock( requestUrl?, requestType?, template|function(options) )</li>
-<li>Mock.mock( template )</li>
-<li>Mock.mock( requestUrl, template )</li>
-<li>Mock.mock( requestUrl, requestType, template )</li>
-<li>Mock.mock( requestUrl, requestType, function(options) )</li>
-</ul>
-<blockquote>
-<p>requestUrl: 要拦截的URL，字符串或正则表达式<br>rquestType: 要拦截的请求类型，get/post/put/delete/options…<br><br>template: 数据模板<br><br>function(options)：生成响应数据的函数，options –&gt; { url, type, body }</p>
-</blockquote>
-<hr>
-        
-          <a class="article-more-a" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Mock</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/">展开全文 >></a>
         </p>
       
 
