@@ -152,6 +152,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-波菲那切数列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/12/%E6%B3%A2%E8%8F%B2%E9%82%A3%E5%88%87%E6%95%B0%E5%88%97/">斐波那切数列</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/12/%E6%B3%A2%E8%8F%B2%E9%82%A3%E5%88%87%E6%95%B0%E5%88%97/" class="archive-article-date">
+  	<time datetime="2022-03-12T07:28:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="斐波那切数列"><a href="#斐波那切数列" class="headerlink" title="斐波那切数列"></a>斐波那切数列</h1>
+        
+          <a class="article-more-a" href="/2022/03/12/%E6%B3%A2%E8%8F%B2%E9%82%A3%E5%88%87%E6%95%B0%E5%88%97/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/12/%E6%B3%A2%E8%8F%B2%E9%82%A3%E5%88%87%E6%95%B0%E5%88%97/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-线性搜索到二分搜索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +248,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linear-Search-brute-force"><a href="#Linear-Search-brute-force" class="headerlink" title="Linear Search - brute force"></a>Linear Search - brute force</h1><h2 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function sqvt(n) &#123;</span><br><span class="line">  for(let i &#x3D; 0; i &lt; n; i++) &#123;</span><br><span class="line">    if (i * i &#x3D;&#x3D; n) return i</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sqvt(25))</span><br></pre></td></tr></table></figure>
+        <h1 id="Linear-Search-brute-force"><a href="#Linear-Search-brute-force" class="headerlink" title="Linear Search - brute force"></a>Linear Search - brute force</h1><h2 id="线性搜索"><a href="#线性搜索" class="headerlink" title="线性搜索"></a>线性搜索</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function sqvt(n) &#123;</span><br><span class="line">  for(i in [...Array(n).keys()]) &#123;</span><br><span class="line">    if (i * i &#x3D;&#x3D; n) return i</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(sqvt(25))</span><br></pre></td></tr></table></figure>
 
 <p>这个函数的时间复杂度使O(n)</p>
 <p>现在通过二分搜索的方法提升这个函数的运行速度</p>
@@ -816,82 +892,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/07/06/%E6%B5%85%E5%B0%9Dnode/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-TypeScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/04/TypeScript/">TypeScript</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/04/TypeScript/" class="archive-article-date">
-  	<time datetime="2021-07-04T09:36:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2>
-        
-          <a class="article-more-a" href="/2021/07/04/TypeScript/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">typescript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/04/TypeScript/">展开全文 >></a>
         </p>
       
 
