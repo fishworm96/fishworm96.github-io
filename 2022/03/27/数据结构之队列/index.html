@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>梦开始的地方</title>
+  <title>数据结构之队列 | 梦开始的地方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="梦开始的地方">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="队列（Queue）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构之队列">
+<meta property="og:url" content="http://example.com/2022/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%98%9F%E5%88%97/index.html">
 <meta property="og:site_name" content="梦开始的地方">
+<meta property="og:description" content="队列（Queue）">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-27T13:04:02.000Z">
+<meta property="article:modified_time" content="2022-03-27T13:26:18.627Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="梦开始的地方" type="application/atom+xml">
@@ -150,34 +155,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-手写脚手架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数据结构之队列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/13/%E6%89%8B%E5%86%99%E8%84%9A%E6%89%8B%E6%9E%B6/">手写脚手架</a>
+    <h1 class="article-title" itemprop="name">
+      数据结构之队列
     </h1>
   
 
         
-        <a href="/2021/07/13/%E6%89%8B%E5%86%99%E8%84%9A%E6%89%8B%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2021-07-13T01:22:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-13</time>
+        <a href="/2022/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%98%9F%E5%88%97/" class="archive-article-date">
+  	<time datetime="2022-03-27T13:04:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><p><code>npm init -y //初始化package.json</code></p>
-<p>在当前的目录下创建一个index.js文件，用来配置入口文件。</p>
-<p>首先在package.json中添加需要执行的文件，配置bin。</p>
-        
-          <a class="article-more-a" href="/2021/07/13/%E6%89%8B%E5%86%99%E8%84%9A%E6%89%8B%E6%9E%B6/#more">more >></a>
-        
+        <h1 id="队列（Queue）"><a href="#队列（Queue）" class="headerlink" title="队列（Queue）"></a>队列（Queue）</h1><a id="more"></a>
+
+<p>前面讲到了栈数据结构是先进后出的原则，队列数据结构是先进先出的原则。</p>
+<p>现在知道了队列是先进先出的原则，我们用js的数组来模拟实现一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const name &#x3D; [];</span><br><span class="line">name.unshift(&#39;firstName&#39;);	&#x2F;&#x2F; [&#39;firstName&#39;]</span><br><span class="line">naem.unshift(&#39;lastName&#39;); &#x2F;&#x2F; [&#39;lastName&#39;, &#39;firstName&#39;]</span><br><span class="line">name.pop(); &#x2F;&#x2F; [&#39;lastName&#39;]</span><br><span class="line">name.pop(); &#x2F;&#x2F; []</span><br></pre></td></tr></table></figure>
+
+<p>这里使用<code>unshift</code>往数组中最前位置推入<code>firstName</code>，再往name数组中推入<code>lastName</code>。然后使用<code>pop</code>从<code>name</code>数组末尾出队<code>firstName</code>，最后出队<code>lastName</code>。</p>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>现在把这个数据结构投入到练习中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nums &#x3D; [1, 2, 3, 4, 5]; &#x2F;&#x2F; 这里是传入的数组</span><br><span class="line">       [1, 4, 9, 16, 25]; &#x2F;&#x2F; 这里是希望得到的数组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function sqr (nums) &#123;</span><br><span class="line">  const ans &#x3D; [];</span><br><span class="line">  while (nums.length &gt; 0) &#123;</span><br><span class="line">    let x &#x3D; nums.pop();</span><br><span class="line">    ans.unshift(x ** 2);</span><br><span class="line">  &#125;</span><br><span class="line">  return ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(sqr(nums))</span><br></pre></td></tr></table></figure>
+
+<p>先定义一个空数组用来存放返回值，使用while循环遍历出传入数组的每个值，使用<code>pop</code>方法出队最后的一个值保存到<code>x</code>变量，再使用<code>unshift</code>推入队列。</p>
+
       
 
       
@@ -190,7 +201,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">cli、脚手架</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -199,16 +210,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/13/%E6%89%8B%E5%86%99%E8%84%9A%E6%89%8B%E6%9E%B6/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/03/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E9%98%9F%E5%88%97/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%A0%86%E6%A0%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构之堆栈</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -223,719 +293,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-浅尝node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/06/%E6%B5%85%E5%B0%9Dnode/">浅尝node</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/06/%E6%B5%85%E5%B0%9Dnode/" class="archive-article-date">
-  	<time datetime="2021-07-06T14:28:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><h2 id="Node-js全局对象global"><a href="#Node-js全局对象global" class="headerlink" title="Node.js全局对象global"></a>Node.js全局对象global</h2><p>在浏览器中全局对象是window,在Node中全局对象是global。</p>
-<p>Node中全局对象下有以下方法，可以在任何地方使用，global可以省略</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log()	在控制台中输出</span><br><span class="line">setTimeout()	设置超时定时器</span><br><span class="line">clearTimeout()	清除超时定时器</span><br><span class="line">setInterval		设置间歇定时器</span><br><span class="line">clearInterval	清楚间歇定时器</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2021/07/06/%E6%B5%85%E5%B0%9Dnode/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/06/%E6%B5%85%E5%B0%9Dnode/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%9F%E5%88%97%EF%BC%88Queue%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">队列（Queue）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-number">1.1.</span> <span class="toc-text">练习</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-TypeScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/04/TypeScript/">TypeScript</a>
-    </h1>
-  
-
-        
-        <a href="/2021/07/04/TypeScript/" class="archive-article-date">
-  	<time datetime="2021-07-04T09:36:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2>
-        
-          <a class="article-more-a" href="/2021/07/04/TypeScript/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">typescript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/04/TypeScript/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mock文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/">Mock文档</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2021-06-22T01:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Mock简明文档"><a href="#Mock简明文档" class="headerlink" title="Mock简明文档"></a>Mock简明文档</h1><h2 id="Mock-mock"><a href="#Mock-mock" class="headerlink" title="Mock.mock()"></a>Mock.mock()</h2><ul>
-<li>Mock.mock( requestUrl?, requestType?, template|function(options) )</li>
-<li>Mock.mock( template )</li>
-<li>Mock.mock( requestUrl, template )</li>
-<li>Mock.mock( requestUrl, requestType, template )</li>
-<li>Mock.mock( requestUrl, requestType, function(options) )</li>
-</ul>
-<blockquote>
-<p>requestUrl: 要拦截的URL，字符串或正则表达式<br>rquestType: 要拦截的请求类型，get/post/put/delete/options…<br><br>template: 数据模板<br><br>function(options)：生成响应数据的函数，options –&gt; { url, type, body }</p>
-</blockquote>
-<hr>
-        
-          <a class="article-more-a" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Mock</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/22/Mock%E6%96%87%E6%A1%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-从0构建vue项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/02/%E4%BB%8E0%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">从0构建vue项目</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/02/%E4%BB%8E0%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2021-06-02T09:26:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>项目目录：</p>
-        
-          <a class="article-more-a" href="/2021/06/02/%E4%BB%8E0%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue项目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/02/%E4%BB%8E0%E6%9E%84%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VueRouter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/07/VueRouter/">VUE-Router笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/07/VueRouter/" class="archive-article-date">
-  	<time datetime="2021-05-07T14:23:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="VUE-Router"><a href="#VUE-Router" class="headerlink" title="VUE-Router"></a>VUE-Router</h1><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><h3 id="1-路由的概念"><a href="#1-路由的概念" class="headerlink" title="1.路由的概念"></a>1.路由的概念</h3><p>路由的本质就是一种对应关系，比如说我们在url地址中输入我们要访问的url地址之后，浏览器要去请求这个url地址对应的资源。<br>那么url地址和真实的资源之间就有一种对应的关系，就是路由。</p>
-<p>路由分为前端路由和后端路由<br>1).后端路由是由服务器端进行实现，并完成资源的分发<br>2).前端路由是依靠hash值(锚链接)的变化进行实现 </p>
-<p>后端路由性能相对前端路由来说较低，所以，我们接下来主要学习的是前端路由<br>前端路由的基本概念：根据不同的事件来显示不同的页面内容，即事件与事件处理函数之间的对应关系<br>前端路由主要做的事情就是监听事件并分发执行事件处理函数</p>
-        
-          <a class="article-more-a" href="/2021/05/07/VueRouter/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/07/VueRouter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-VueX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/07/VueX/">Vuex笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/07/VueX/" class="archive-article-date">
-  	<time datetime="2021-05-07T14:23:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h1><h2 id="1-Vuex是什么"><a href="#1-Vuex是什么" class="headerlink" title="1.Vuex是什么"></a>1.Vuex是什么</h2><p>Vuex是实现组件全局状态(数据)管理的一种机制，可以方便的实现组件之间数据的共享</p>
-        
-          <a class="article-more-a" href="/2021/05/07/VueX/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/07/VueX/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/07/Vue%E7%AC%94%E8%AE%B0/">Vue笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/07/Vue%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-05-07T14:19:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="VUE"><a href="#VUE" class="headerlink" title="VUE"></a>VUE</h1><h2 id="VUE概述"><a href="#VUE概述" class="headerlink" title="VUE概述"></a>VUE概述</h2><p>vue：渐进式JavaScript框架</p>
-<p>声明式渲染 -&gt;组件系统-&gt;客户端路由-&gt;集中式状态管理-&gt;项目构建</p>
-        
-          <a class="article-more-a" href="/2021/05/07/Vue%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/07/Vue%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ajax笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/">ajax笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-21T13:46:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Ajax基础"><a href="#Ajax基础" class="headerlink" title="Ajax基础"></a>Ajax基础</h1><h2 id="Ajax的应用场景"><a href="#Ajax的应用场景" class="headerlink" title="Ajax的应用场景"></a>Ajax的应用场景</h2><p>1.页面上拉加载更多数据</p>
-<p>2.列表数据无刷新分页</p>
-<p>3.表单项离开焦点数据证</p>
-<p>4.搜索框提示文字下拉列表</p>
-        
-          <a class="article-more-a" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/ajax%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/git%E7%AC%94%E8%AE%B0/">git笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/git%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2021-04-21T13:45:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h1><p>git版本的查询: git –version</p>
-        
-          <a class="article-more-a" href="/2021/04/21/git%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/git%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -958,8 +341,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
